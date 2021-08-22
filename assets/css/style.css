@@ -851,7 +851,7 @@ p:last-child {
 
 @media(min-width:1400px) {
 	.section-gap-t-165 {
-		padding-top: 135px
+		padding-top: 5px
 	}
 }
 
@@ -875,7 +875,7 @@ p:last-child {
 
 @media(min-width:1400px) {
 	.section-gap-tb-165 {
-		padding-top: 135px;
+		padding-top: 50px;
 		padding-bottom: 0px
 	}
 }
@@ -2600,7 +2600,7 @@ p:last-child {
 
 @media(min-width:992px) {
 	.resume-tab {
-		margin-bottom: 100px
+		margin-bottom: 50px
 	}
 }
 
