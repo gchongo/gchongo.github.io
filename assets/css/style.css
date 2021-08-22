@@ -938,7 +938,7 @@ p:last-child {
 
 @media(min-width:992px) {
 	.section-title {
-		font-size: 70px
+		font-size: 50px
 	}
 }
 
@@ -2655,7 +2655,7 @@ p:last-child {
 
 @media(min-width:1200px) {
 	.resume-tab .nav-item button {
-		font-size: 58px
+		font-size: 40px
 	}
 }
 
