@@ -862,28 +862,28 @@ p:last-child {
 }
 
 .section-gap-tb-165 {
-	padding-top: 75px;
-	padding-bottom: 75px
+	padding-top: 30px;
+	padding-bottom: 30px
 }
 
 @media(min-width:992px) {
 	.section-gap-tb-165 {
-		padding-top: 115px;
-		padding-bottom: 0px
+		padding-top: 80px;
+		padding-bottom: 80px
 	}
 }
 
 @media(min-width:1400px) {
 	.section-gap-tb-165 {
-		padding-top: 50px;
-		padding-bottom: 0px
+		padding-top: 30px;
+		padding-bottom: 30px
 	}
 }
 
 @media(min-width:1800px) {
 	.section-gap-tb-165 {
 		padding-top: 80px;
-		padding-bottom: 0px
+		padding-bottom: 80px
 	}
 }
 
@@ -1023,7 +1023,7 @@ p:last-child {
 
 .hero-wrapper {
 	position: relative;
-	height: 940px;
+	height: 850px;
 	overflow: hidden;
 	z-index: 1
 }
