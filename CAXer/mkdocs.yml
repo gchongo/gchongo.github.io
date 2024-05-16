@@ -1,0 +1,74 @@
+site_name: Hello CAXer
+site_url: https://caxer.net/
+use_directory_urls: false
+theme:
+  name: material
+  # favicon: images/favicon.png  #网站图标
+  # previous: fontawesome/solid/angle-left
+  # next: fontawesome/solid/angle-right
+  language: zh
+  features:
+    - navigation.instant # 即时加载
+    - navigation.instant.prefetch #即时预取
+    - navigation.instant.progress #进度指示器
+    - navigation.tabs #导航选项卡
+    #- navigation.tabs.sticky #粘性导航标签
+    #- navigation.sections #导航部分
+    - navigation.expand #导航扩展
+    #- navigation.path #导航路径
+    - navigation.indexes #章节索引页
+    - navigation.top #返回顶部
+    - navigation.footer #上一页和下一页
+    - toc.follow #锚跟随
+  # 自动亮/暗模式
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+copyright: Copyright &copy; 2016 - 2024 CAXer
+extra:
+  generator: false
+  # homepage: https://caxer.net
+  social:
+    - icon: fontawesome/brands/mastodon 
+      link: https://pastory.org
+      name: 陈年往事
+    - icon: fontawesome/brands/pied-piper-alt
+      link: https://howhy.day
+      name: 今日号外
+
+plugins:
+  - search:
+      lang: 
+        - en
+        - zh
+
+nav:
+  - 首页: index.md 
+  - CAD基础:
+       - 1. 文章1: blog/P1.md
+       - 2. 文章2: blog/P2.md
+  - CAD:
+     - 文章3: blog/P3.md
+     - 文章4: blog/P4.md
+     - 机械设计手册:
+       - 1. 公差设计: blog/A/AC.md
+       - 2. 尺寸链: blog/A/AB.md
+  - Note:
+    - Markdown语法: Note/Markdown.md
+
+
+
