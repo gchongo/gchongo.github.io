@@ -1,0 +1,167 @@
+{
+  "main": {
+    "id": "485b2dd45029d731",
+    "type": "split",
+    "children": [
+      {
+        "id": "64d050963b304b18",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38cce3ab6330f8ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/公差分析方法.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "14c5ab45faa41674",
+    "type": "split",
+    "children": [
+      {
+        "id": "157755794ebf4ba9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8ba5b4c15cbde040",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "40aa65f9e5368a89",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a579716d71f1ff66",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f7c32e6b0222786f",
+    "type": "split",
+    "children": [
+      {
+        "id": "662bf26096ffa19c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2313213d57383673",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "blog/公差分析方法.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "73f20dfc5dc2980b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "blog/公差分析方法.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ea2e8adc031547a3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f0b3d630b8ce88c7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "blog/公差分析方法.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "remotely-save:Remotely Save": false
+    }
+  },
+  "active": "38cce3ab6330f8ed",
+  "lastOpenFiles": [
+    "Note/Markdown.md",
+    "blog/公差分析方法.md",
+    "blog/P4.md",
+    "index.md",
+    "Welcome.md",
+    "Note",
+    "blog/A/AB.md",
+    "blog/A/AC.md",
+    "blog/A",
+    "blog/P3.md",
+    "blog/P2.md",
+    "blog/Introducing GD&T and GPS.md",
+    "blog/gc.md",
+    "blog"
+  ]
+}
