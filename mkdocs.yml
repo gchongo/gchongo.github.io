@@ -59,17 +59,29 @@ plugins:
 nav:
   - Home: index.md 
   - CAD: 
-    - Technical Drawing for Product Design:
-      - Introducing GD&T and GPS: blog/Introducing GD&T and GPS.md
-      - 文章2: blog/P2.md
-      - 文章3: blog/gc.md
+    - Technical Drawing for Product Design: 
+      - 1.Introducing GD&T and GPS: blog/CAD/Introducing GD&T and GPS.md
+      - 2.The Geometrical Product Specification (GPS) Language: blog/CAD/The Geometrical Product Specification (GPS) Language.md
+      - 3.Dimensioning with Geometrical Tolerances: blog/CAD/Dimensioning with Geometrical Tolerances.md
+      - 4.The GPS and GD&T Language: blog/CAD/The GPS and GD&T Language.md
+      - 5. Interdependence Between Dimensions and Geometry: blog/CAD//Interdependence Between Dimensions and Geometry.md
+      - 6.Datums and Datum Systems: blog/CAD/Datums and Datum Systems.md
+      - 7.Form Tolerances: blog/CAD/Form Tolerances.md
+      - 8.Orientation Tolerances: blog/CAD/Orientation Tolerances.md
+      - 9.Location Tolerances: blog/CAD/Location Tolerances.md
+      - 10.Profile Tolerances: blog/CAD/Profile Tolerances.md
+      - 11.Run-Out Tolerances: blog/CAD/Run-Out Tolerances.md
+      - 12.Geometrical Specification for Non-Rigid Parts: blog/CAD/Geometrical Specification for Non-Rigid Parts.md
+      - 13.Linear Sizes: blog/CAD/Linear Sizes.md
+      
+
   - CAE:
-    - 文章3: blog/P3.md
-    - 文章4: blog/P4.md
+    - 文章3: blog/CAE/P3.md
+    - 文章4: blog/CAE/P4.md
     - 机械设计手册:
-      - 1. 公差设计: blog/A/AC.md
-      - 2. 尺寸链: blog/A/AB.md
-      - 3. 公差分析1: blog/公差分析方法.md
+      - 1. 公差设计: blog/CAE/AC.md
+      - 2. 尺寸链: blog/CAE/AB.md
+    
 
  # - CAM:
  #     - 
@@ -77,8 +89,8 @@ nav:
  # - CAPP:
  #     - 
  #     -
-  - Note:
-    - Markdown语法: Note/Markdown.md
+  - COX:
+    - Markdown: blog/COX/Markdown教程.md
 
 
 

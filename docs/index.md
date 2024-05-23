@@ -1,17 +1,4 @@
-# Home
+# Welcome CAXer
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+本站是我私人的学习笔记库，专注于记录我在机械设计、制造工艺和有限元分析等领域的知识与见解。这些领域构成了我的专业范畴，并且也是我职业生涯的核心部分。此外，我还热衷于分享其他个人兴趣领域，如历史、电影、音乐和科技等，这些内容不仅丰富了我的知识视野，也是我愿意与他人交流的话题。  
+目前，本站的结构分为三个主要部分：CAD、CAE和COX。CAD代表计算机辅助设计，这里主要汇集了我在机械设计方面的学习心得；CAE即计算机辅助工程，涵盖了有限元分析和产品工艺等相关领域的资料；而COX，即'Cage of X'，是一个包罗万象的类别，其中'X'代表一切（everything），用于归档我对历史、科技、文学等广泛话题的探索和思考。当然，对于这些内容的解释和分类，我保留最终的解释权。未来，随着我兴趣的扩展和知识的积累，网站的目录也可能会相应增加新的类别。
