@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "blog/CAD/The Geometrical Product Specification (GPS) Language.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "blog/CAD/The Geometrical Product Specification (GPS) Language.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "blog/CAD/The Geometrical Product Specification (GPS) Language.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "blog/CAD/The Geometrical Product Specification (GPS) Language.md"
               }
             }
           }
@@ -149,20 +149,20 @@
   },
   "active": "38cce3ab6330f8ed",
   "lastOpenFiles": [
+    "blog/CAD/Introducing GD&T and GPS.md",
+    "blog/CAD/Profile Tolerances.md",
+    "blog/CAD/Orientation Tolerances.md",
+    "blog/CAD/Location Tolerances.md",
+    "blog/CAD/Linear Sizes.md",
+    "blog/CAD/Run-Out Tolerances.md",
     "blog/CAD/The Geometrical Product Specification (GPS) Language.md",
+    "blog/CAD/The GPS and GD&T Language.md",
+    "index.md",
     "Pasted image 20240523210133.png",
     "blog/CAD/Interdependence Between Dimensions and Geometry.md",
-    "blog/CAD/Orientation Tolerances.md",
-    "blog/CAD/Introducing GD&T and GPS.md",
-    "index.md",
-    "blog/CAD/Linear Sizes.md",
     "blog/CAD/Geometrical Specification for Non-Rigid Parts.md",
-    "blog/CAD/Run-Out Tolerances.md",
-    "blog/CAD/Profile Tolerances.md",
-    "blog/CAD/Location Tolerances.md",
     "blog/CAD/Form Tolerances.md",
     "blog/CAD/Datums and Datum Systems.md",
-    "blog/CAD/The GPS and GD&T Language.md",
     "blog/CAD/Dimensioning with Geometrical Tolerances.md",
     "blog/CAE/AC.md",
     "blog/COX/Markdown教程.md",
