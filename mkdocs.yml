@@ -56,9 +56,13 @@ plugins:
         - zh
         - en
 
+extra_css: 
+  - css/mobile.css
 
 nav:
-  - Home: index.md 
+  - Home: 
+    - Navigation: navigation.md
+    - index.md
   - CAD: 
     - Technical Drawing for Product Design: 
       - 1.Introducing GD&T and GPS: blog/CAD/Introducing GD&T and GPS.md

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/CAD/Dimensioning with Geometrical Tolerances.md",
+                "file": "navigation.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/CAD/Dimensioning with Geometrical Tolerances.md",
+                "file": "navigation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/CAD/Dimensioning with Geometrical Tolerances.md",
+                "file": "navigation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/CAD/Dimensioning with Geometrical Tolerances.md"
+                "file": "navigation.md"
               }
             }
           }
@@ -149,10 +149,13 @@
   },
   "active": "38cce3ab6330f8ed",
   "lastOpenFiles": [
+    "导航.md",
+    "navigation.md",
+    "www.baidu.com.md",
+    "blog/CAD/Dimensioning with Geometrical Tolerances.md",
     "blog/CAD/The GPS and GD&T Language.md",
     "blog/CAD/Introducing GD&T and GPS.md",
     "blog/CAD/Interdependence Between Dimensions and Geometry.md",
-    "blog/CAD/Dimensioning with Geometrical Tolerances.md",
     "blog/CAD/The Geometrical Product Specification (GPS) Language.md",
     "blog/CAD/Linear Sizes.md",
     "blog/CAD/Orientation Tolerances.md",
@@ -177,8 +180,6 @@
     "blog/P4.md",
     "Welcome.md",
     "Note",
-    "blog/A/AB.md",
-    "blog/A/AC.md",
     "blog/A",
     "blog"
   ]
