@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "navigation.md",
+                "file": "blog/CAD/The GPS and GD&T Language.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "navigation.md",
+                "file": "blog/CAD/The GPS and GD&T Language.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "navigation.md",
+                "file": "blog/CAD/The GPS and GD&T Language.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "navigation.md"
+                "file": "blog/CAD/The GPS and GD&T Language.md"
               }
             }
           }
@@ -149,12 +149,12 @@
   },
   "active": "38cce3ab6330f8ed",
   "lastOpenFiles": [
-    "导航.md",
-    "navigation.md",
-    "www.baidu.com.md",
     "blog/CAD/Dimensioning with Geometrical Tolerances.md",
     "blog/CAD/The GPS and GD&T Language.md",
     "blog/CAD/Introducing GD&T and GPS.md",
+    "navigation.md",
+    "导航.md",
+    "www.baidu.com.md",
     "blog/CAD/Interdependence Between Dimensions and Geometry.md",
     "blog/CAD/The Geometrical Product Specification (GPS) Language.md",
     "blog/CAD/Linear Sizes.md",

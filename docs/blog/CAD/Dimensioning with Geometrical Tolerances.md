@@ -17,9 +17,11 @@ In order to apply thismethod, some simple principles should be taken into accoun
 ![](https://pics.caxer.net/2024/05/32a8541b553eab4be190a749f2f88434.png)
 <center>Fig. 3.3 The zone and tolerance value of each feature should be defined. The real features of the part should fall within the boundary of their theoretical location, that is, within the location they have in the ideal workpiece</center>
 
-*The feature of size concept*
+---
+
+**The feature of size concept**
 <p align="justify">ISO definition: according to ISO 17450/1 a feature of size with a linear size is a geometrical feature that has one or more intrinsic characteristics, only one of which may be considered as a variable parameter. A feature of size can be a sphere, a circle, two straight lines, two parallel opposite planes or a cylinder. A single cylindrical hole or shaft is a linear size feature. Its linear size refers to its diameter. An axis, median plane or centrepoint can be derived from a feature of size.</p>
-ASME definition: a regular feature of size is a one cylindrical surface, a spherical surface, a circular element, or a set of two opposite parallel line elements or opposite parallel surfaces associated with a single directly toleranced dimension.
+<p align="justify">ASME definition: a regular feature of size is a one cylindrical surface, a spherical surface, a circular element, or a set of two opposite parallel line elements or opposite parallel surfaces associated with a single directly toleranced dimension.</p>
 A feature of size:
 
 1. <p align="justify">is characterized by opposite points on a surface;</p>
