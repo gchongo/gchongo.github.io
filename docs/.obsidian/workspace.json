@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/CAD/The GPS and GD&T Language.md",
+                "file": "blog/CAD/The GPS and GDT Language.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/CAD/The GPS and GD&T Language.md",
+                "file": "blog/CAD/The GPS and GDT Language.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/CAD/The GPS and GD&T Language.md",
+                "file": "blog/CAD/The GPS and GDT Language.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/CAD/The GPS and GD&T Language.md"
+                "file": "blog/CAD/The GPS and GDT Language.md"
               }
             }
           }
@@ -140,7 +140,6 @@
     "hiddenItems": {
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
@@ -149,36 +148,39 @@
   },
   "active": "38cce3ab6330f8ed",
   "lastOpenFiles": [
+    "blog/COX/未命名.md",
+    "blog/Template/Template.md",
+    "2024-01-31.md",
+    "blog/CAD/The GPS and GDT Language.md",
+    "blog/CAD/Introducing GDT and GPS.md",
+    "blog/COX/Markdown教程.md",
+    "blog/Template",
+    "blog/Template.md",
+    "blog/CAE/P4.md",
+    "blog/CAE/P3.md",
+    "blog/CAE/AC.md",
+    "blog/CAE/AB.md",
+    "stylesheets/extra.css",
+    "stylesheets",
+    "tags.md",
+    "blog/CAD/Location Tolerances.md",
+    "index.md",
+    "navigation.md",
+    "blog/CAD/Linear Sizes.md",
+    "blog/CAD/Datums and Datum Systems.md",
     "blog/CAD/Dimensioning with Geometrical Tolerances.md",
     "blog/CAD/The GPS and GD&T Language.md",
     "blog/CAD/Introducing GD&T and GPS.md",
-    "navigation.md",
     "导航.md",
     "www.baidu.com.md",
     "blog/CAD/Interdependence Between Dimensions and Geometry.md",
     "blog/CAD/The Geometrical Product Specification (GPS) Language.md",
-    "blog/CAD/Linear Sizes.md",
     "blog/CAD/Orientation Tolerances.md",
     "blog/CAD/Profile Tolerances.md",
-    "blog/CAD/Location Tolerances.md",
-    "blog/CAD/Run-Out Tolerances.md",
-    "index.md",
     "Pasted image 20240523210133.png",
-    "blog/CAD/Geometrical Specification for Non-Rigid Parts.md",
-    "blog/CAD/Form Tolerances.md",
-    "blog/CAD/Datums and Datum Systems.md",
-    "blog/CAE/AC.md",
-    "blog/COX/Markdown教程.md",
-    "blog/CAE/AB.md",
-    "blog/CAE/P4.md",
-    "blog/CAE/P3.md",
-    "Note/Markdown.md",
     "blog/COX",
-    "blog/公差分析方法.md",
     "blog/CAD",
     "blog/CAE",
-    "blog/P4.md",
-    "Welcome.md",
     "Note",
     "blog/A",
     "blog"

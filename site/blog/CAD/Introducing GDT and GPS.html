@@ -1,0 +1,1404 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://caxer.net/blog/CAD/Introducing%20GDT%20and%20GPS.html">
+      
+      
+        <link rel="prev" href="../../index.html">
+      
+      
+        <link rel="next" href="The%20Geometrical%20Product%20Specification%20%28GPS%29%20Language.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20">
+    
+    
+      
+        <title>1.Introducing GD&T and GPS - Hello CAXer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introducing-gdt-and-gps" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Hello CAXer" class="md-header__button md-logo" aria-label="Hello CAXer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hello CAXer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.Introducing GD&T and GPS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.html" class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="Introducing%20GDT%20and%20GPS.html" class="md-tabs__link">
+          
+  
+    
+  
+  CAD
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../CAE/P3.html" class="md-tabs__link">
+          
+  
+    
+  
+  CAE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../COX/Markdown%E6%95%99%E7%A8%8B.html" class="md-tabs__link">
+          
+  
+    
+  
+  COX
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hello CAXer" class="md-nav__button md-logo" aria-label="Hello CAXer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Hello CAXer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    CAD
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            CAD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical Drawing for Product Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Drawing for Product Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.Introducing GD&T and GPS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Introducing%20GDT%20and%20GPS.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1.Introducing GD&T and GPS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-the-shortcoming-of-traditional-coordinate-tolerancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 The Shortcoming of Traditional Coordinate Tolerancing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-traditional-dimensioning-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Traditional Dimensioning Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="The%20Geometrical%20Product%20Specification%20%28GPS%29%20Language.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.The Geometrical Product Specification (GPS) Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Dimensioning%20with%20Geometrical%20Tolerances.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.Dimensioning with Geometrical Tolerances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="The%20GPS%20and%20GDT%20Language.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.The GPS and GD&T Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Interdependence%20Between%20Dimensions%20and%20Geometry.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Interdependence Between Dimensions and Geometry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Datums%20and%20Datum%20Systems.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.Datums and Datum Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Form%20Tolerances.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.Form Tolerances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Orientation%20Tolerances.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.Orientation Tolerances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Location%20Tolerances.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.Location Tolerances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Profile%20Tolerances.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.Profile Tolerances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Run-Out%20Tolerances.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.Run-Out Tolerances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometrical%20Specification%20for%20Non-Rigid%20Parts.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12.Geometrical Specification for Non-Rigid Parts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Linear%20Sizes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13.Linear Sizes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CAE
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            CAE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CAE/P3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文章3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CAE/P4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文章4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    机械设计手册
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            机械设计手册
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CAE/AC.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 公差设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CAE/AB.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 尺寸链
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    COX
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            COX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COX/Markdown%E6%95%99%E7%A8%8B.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-the-shortcoming-of-traditional-coordinate-tolerancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 The Shortcoming of Traditional Coordinate Tolerancing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-traditional-dimensioning-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Traditional Dimensioning Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="introducing-gdt-and-gps">Introducing GD&amp;T and GPS</h1>
+<h2 id="abstract">Abstract</h2>
+<p align="justify">The technical product documentation that is currently drawn up in many companies is unfortunately still ambiguous and contains many errors, such as erroneous datums, imprecise or missing distances, as well as incongruent and difficult to check tolerances. For about 150 years, a tolerancing approach called “coordinate tolerancing” was the predominant tolerancing system used on engineering drawings.</p>
+<p align="justify">
+This methodology in fact no longer results to be the most suitable for the requirements of the modern global roductive realty, in which companies, for both strategic and market reasons, frequently resort to suppliers and producers located in different countries, and it is therefore necessary to make use of communication means in which the transfer of information is both univocal and rigorous. GD&T or GPS is a symbolic language that is used to specify the limits of imperfection that can be tolerated in order to guarantee a correct assembly, as well as the univocal and repeatable functionality and control of the parts that have to be produced.</p>
+<h2 id="11-the-shortcoming-of-traditional-coordinate-tolerancing">1.1 The Shortcoming of Traditional Coordinate Tolerancing</h2>
+<p align="justify">Geometric Dimensioning and Tolerancing (GD&T) or Geometric Product Specification (GPS) is a fundamental design tool that is used to clearly and unambiguously define the allowable limits of imperfection of as-produced parts, with the aim of guaranteeing assembly and functionality. GD&T, or GPS, is a language that is made up of symbols which can be used to accurately control tolerances, but it also allows the maximum manufacturing flexibility and control of the costs to be achieved.</p>
+<p align="justify">Real surfaces can in fact differ, to various extents, from the exact geometric form foreseen during the design phase, both as far as the geometric form is concerned and for the pre-established position with respect to other surfaces assumed as a reference, as a result of various factors (bending of the workpiece and of the tool during the tooling, vibrations of the machine, deformations during hardening, etc.).</p>
+<p><img alt="" src="https://pics.caxer.net/2024/05/3fcfde09b5ec13018f3cbcc19b675521.png" />
+<center>Fig. 1.1 The real surfaces of a constructed part may deviate to various extents from both the geometrically exact form indicated during the design phase and from the pre-established position with respect to surfaces or points assumed as a datum.</center></p>
+<p align="justify">The workpiece in Fig. 1.1 is shown with the form errors conveniently enlarged for explanatory purposes, but it can also appear as such for the instruments that perform precise measurements (such as the modern Coordinate Measuring Machines, CMM). </p>
+<p align="justify">Another example of form error is illustrated in Fig. 1.2: the sinuous trend of the workpiece or not detected by the measurement gauge, which locally ascertains, section by section, the values of the diameters that fall within the dimensional tolerance limits. However, it would be difficult to insert the workpiece easily into an axially extended hole, because the spatial dimension of the pin would be greater than that foreseen for the tolerance.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/05/b901e9d91010c6102e26ffa55de5b784.png" />
+<center>Fig. 1.2 Evaluating the mating conditions by only referring to linear distances leads to the effects of the form being neglected: a smooth f/H shaft-hole mating is in practice forced if the roundness and straightness conditions are not adequate. In fact, the measured maximum dimension, <em>d<sub>max</sub></em>, that conforms to the requested tolerance is less than the Dmax dimension that corresponds to the actual mating dimensions of the pin. Accordingly, it is not possible to fit the hinge pin with the hole because of the error in the straightness of the axis</center></p>
+<p align="justify">It is hence necessary to set adequate constraints on the straightness of the axis and on the roundness of the surface. It therefore seems evident that, when establishing the errors that are acceptable in the construction of a part, the form and dimensions should be evaluated considering the functional requirements. Above all, as the complexity of the designed objects increases, because of the numerous technological processes that are now utilized and because of the necessity of guaranteeing quality through careful inspections and verifications, the information that is derived from the project, and therefore from the design of the component that must be produced, should refer to all the sectors involved as much as possible. The drawings of the workpiece, as requested for the process, should not be ambiguous; the function of the parts, as well as the way of obtaining and controlling them should be completely included and reported. 
+In short, each feature of a workpiece should be fully defined in terms of dimension, position, orientation, and form. </p>
+<p align="justify">The tolerances, whether geometrical or dimensional, should be essential parts of the design process right from the beginning, and not just an accessory that has to be added only once the design has been completed.</p>
+<p align="justify">One procedure that can be adopted to satisfy these requirements is the functional dimensioning method, which can be defined as a way of specifying the geometric functionalities and the functional relationships that exist among the form characteristics, in a project or design, in order to obtain the most valid production from both a qualitative and an economic point of view.</p>
+
+<p align="justify">The components that have to be controlled and measured can be specificated through this method; in this way, the intentions of the designer are respected, and the manufacturer is able to choose the most appropriate manufacturing procedures.</p>
+<p align="justify">Computer Aided Design (CAD) tools, which have the purpose of generating, manipulating, and reporting the geometry of the parts that have to be produced, are currently used for design purposes, but they are not sufficient on their own to document an industrial product in an effective way.</p>
+<p align="justify">In order to communicate a precise and rigorous description of a part, not only should the dimensions be indicated in the engineering drawing, but also the admissible error, in terms of size, location, orientation and form.</p>
+
+<p align="justify">The term “Geometric Dimensioning and Tolerancing” (GD&T) is often used to characterize a functional design. GD&T is a language made up of symbols that are used to specify the limits of imperfection that can be tolerated in order to guarantee a correct assembly, as well as the univocal and repeatable functionality and control of the parts that have to be produced. Moreover, GD&T is a tool that allows an imperfect geometry to be managed “perfectly”.</p>
+
+<p align="justify">The GD&T method was developed and extended during the Second World War by Great Britain and the United States. The first publication concerning a standard, pertaining to the basic concepts of form and position,was published in Great Britain in 1948.1 In 1940, in theUnited States, Chevrolet printed a publication concerning position tolerances, and this was followed, in 1945, by amanual, which was published by the American Military administration, in which symbols were introduced to specify form and position tolerances. Over the following years, the ASA and SAE associations published their own standards, which, in 1966, took on the present forms, although they have periodically been updated (the most recent being in 2018). </p>
+
+<p align="justify">About 50 years ago, some companies in Europe began to introduce a few indications relative to admissible geometric errors, and the first mention of this topic appeared in texts on comparative design. In 1969, an ISO recommendation project introduced, at a normative level, the symbols that are used today. However, geometric tolerance was long considered an option that was only to be used in particular and rare occasions, that is, when the dimensional tolerances (which were generally considered suitable if accompanied by a correct execution) were not considered sufficient to define the exact form of a component.</p>
+
+<p align="justify">A different approach to tolerances, which couples geometric dimensioning with the functionality of a workpiece, is currently being developed, with the aim of obtaining a shared, clear and comprehensive language for all the production sectors interested in a particular project, and of reporting the finished conditions of the objects that have to be produced in a univocal and faithful way, with the intention of advantaging functionality and reducing costs. As already mentioned, this is not a recent method, but it has still not been fully exploited in many European countries, where the benefits that could be achieved, in practical terms, on the highly competitive markets of today, are often disregarded. </p>
+<p align="justify">
+Unfortunately, the technical product documentation that is currently drawn up in many companies is still ambiguous and often contains many errors, such as erroneous datums, imprecise or missing distances, as well as incongruent and difficult to check tolerances. These documents were in fact first conceived considering a series of standards that originated in the technical industrial context of the last century, that is, by referring to the then most widespread measurement instruments, such as gauges and micrometers, in which the measurements were made and expressed as the distance between two points. The most frequently used measurement method was that of coordinate dimensioning, where only the dimensional tolerances (that is, the “plus or minus” system), which could give rise to manufacturing and control ambiguity, were used. </p>
+
+<p align="justify">This methodology is in fact no longer results to be themost suitable for the requirements of the modern global productive realty, in which companies, for both strategic and market reasons, frequently resort to suppliers and producers who are located in different countries, and it is therefore necessary to make use of communication means in which the transfer of information is both univocal and rigorous.</p>
+
+<h2 id="12-traditional-dimensioning-example">1.2 Traditional Dimensioning Example</h2>
+<p align="justify">Let us consider the drawing in Fig. 1.3 of a plate with 4 holes, for which the assembly with fixed fasteners is demonstrated as an example; the traditional measurement method has been applied to the plate, that is, with the 4 holes being located according to the dimensional tolerances.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/05/f6dbe0b756b67d083ed7009e842a358f.png" />
+<center>Fig. 1.3 Traditional dimensioning of a plate with 4 holes, for which the functional assembly
+conditions are shown (coherence of the profiles, perpendicularity of the profile, location of the
+holes, implied datums)</center>
+<img alt="" src="https://pics.caxer.net/2024/05/f46bb7363cea5ffea8ea42ec51f4eeb9.png" />
+<center>Fig. 1.4 If themeasurement of the dimensions starts from the edges, which are not orientated at 90°, as shown in the drawing, how should the workpiece be arranged exactly to control the dimensional tolerance? Furthermore, as themeasurement is not the individual distance between pairs of opposite points, how are the opposite points determined?</center></p>
+<p>An observation of the thus definedworkpiece leads to the following considerations and questions:</p>
+<ol>
+<li>
+<p>Are the edges of the workpiece located with respect to the holes or are the holes located with respect to the edges(1)?</p>
+</li>
+<li>
+<p><p align="justify">If the distances are considered to originate at the edges, which are not orientated at 90°, as shown in the drawing (Fig. 1.4), howshould theworkpiece be arranged exactly to control the dimensional tolerance? Furthermore, the measurement is not just the individual distance between pairs of opposite points.</p></p>
+</li>
+<li>
+<p><p align="justify">In coordinate tolerancing, since datums are implied and they depend on the interpretation of the metrologists, the placement on the gauging surface may produce different measurement results. Hence it is possible that a good partmay be rejected or a bad partmay be accepted. Furthermore, if the datum sequence is not indicated, the control of the location of the holes can be conducted in different ways (for example, by first checking the position of a hole and from this position then checking the positions of the subsequent holes, or by considering one or two edges as a single datum for all the holes, see Fig. 1.5): such a control is therefore neither univocal nor repeatable.</p></p>
+</li>
+<li>
+<p><p align="justify">The cross-sectional area of the tolerance zone for the position control of the hole axis is square, while the form of the hole is round; therefore, the tolerance area does not mirror the form of the hole that it should protect. Moreover, starting from the theoretical position (point 0 in Fig. 1.6), various possible limit positions of the axis are possible, depending on the radial directions (a possible error of 0.28 mm can be reached along the diagonal of the square, that is, a greater error than the tolerance of 0.2 indicated on the drawing).</p></p>
+</li>
+<li>
+<p><p align="justify">A series of measurements can lead to an accumulation of the error pertaining to the position of the holes; Fig. 1.7 shows that it is important to report, in a clear way, the control method that is used for the positioning of a hole, which, if left to the discretion of an inspector, could lead to a variety of very different results.</p></p>
+</li>
+<li><p align="justify">Finally, the workpiece may be rejected during the control because it does not conform with the tolerances prescribed during the design phase, even though it can be coupled and it is functional.</p>
+Inconveniencies of this type are more common than one might think, and they may lead to negative effects on the cost and times necessary for the construction of a component.
+<img alt="" src="https://pics.caxer.net/2024/05/cc7d5c96e73d3c020877cf917ee53327.png" />
+<center>Fig. 1.5 Without any indication of the datums, the control of the position of the holes is not univocal or repeatable (measurements 1 and 2 give different results, according to the support system of the part used during the verification)</center></li>
+</ol>
+<p align="justify">In short, the technical product documentation of a product without functional geometric tolerances and without any indication of datums is generally incomplete, and therefore not unambiguously interpretable. Such an incomplete, ambiguous tolerancing of components on engineering drawings leads not only to increased production and inspection costs but also to an incalculable liability risk in the case of legal disputes.</p>
+
+<p><img alt="" src="https://pics.caxer.net/2024/05/e6b4bff8efb7b65be920c6fadd6d344d.png" />
+<center>Fig. 1.6 Starting from the theoretical position (point 0), the limit positions allowed for the axis may be larger or smaller, depending on the radial directions. The axis position of the hole at point 1 is accepted during the control, but if it occurs at point 2, the workpiece is discarded. But which of the two holes is closest to the ideal position?</center>
+<img alt="" src="https://pics.caxer.net/2024/05/c636971a70b9e14787b46fe87c18dd99.png" />
+<center>Fig. 1.7 The control of the position of a hole may be achieved by resorting to of the use of ideal circles and surfaces (known as associated geometry in the ISO system). The three verification methodologies shown in the figures could furnish contrasting results</center></p>
+<h2 id="reference">Reference</h2>
+<ol>
+<li>KrulikowskiA(1997) Fundamentals ofGD&amp;Tself-studyworkbook, 2nd edn. Effective Training
+Inc.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../../index.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Navigation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Navigation
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="The%20Geometrical%20Product%20Specification%20%28GPS%29%20Language.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 2.The Geometrical Product Specification (GPS) Language">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                2.The Geometrical Product Specification (GPS) Language
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2024 CAXer
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+    
+    
+    
+    <a href="https://pastory.org" target="_blank" rel="noopener me" title="陈年往事" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://howhy.day" target="_blank" rel="noopener" title="今日号外" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4 24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9 2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      
+    
+  </body>
+</html>

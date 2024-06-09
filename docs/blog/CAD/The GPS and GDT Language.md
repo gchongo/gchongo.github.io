@@ -34,3 +34,21 @@
 ![](https://pics.caxer.net/2024/05/2cab96a564be14140965c6123d475bbf.png)
 <center>Fig. 4.3 Each standard is characterised by 2 coordinates in the matrix, but can often refer to more than one property, or different steps of the production process, and may thus occupy an area of the matrix rather than just a single compartment, as is the case of ISO 1101 of 2017</center>
 <p align="justify">The applicability hierarchy was conceived in such a way that the highest standards (general) also apply for the lowest (specific) ones. For example, it is not necessary to specify the reference temperature in ISO 1101 (general, geometrical tolerance) as UNI ISO 1 (fundamental) is valid.</p>
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="gchongo/gchongo.github.io"
+        data-repo-id="R_kgDOL1P4-w"
+        data-category="General"
+        data-category-id="DIC_kwDOL1P4-84Cf98Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>

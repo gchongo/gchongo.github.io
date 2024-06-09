@@ -1,14 +1,30 @@
-# Welcome CAXer
+搜索：
+|<a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer">百度</a>
+|<a href="https://www.google.com" target="_blank" rel="noopener noreferrer">谷歌</a>
+|<a href="https://www.bing.com" target="_blank" rel="noopener noreferrer">必应</a>|
 
-<p align="justify">This website is my personal depository for learning notes, dedicated to chronicling my expertise and insights in the realms of mechanical design, manufacturing processes, and finite element analysis. </p>
-<p align="justify">These domains form the bedrock of my professional expertise and are central to my career trajectory. Beyond these technical pursuits, I am also keen to share my personal interests in history, cinema, music, and technology. These subjects not only broaden my intellectual horizons but also serve as topics that I am eager to engage with others.</p>
+视频：
+|<a href="https://www.bilibili.com" target="_blank" rel="noopener noreferrer">B站</a>
+|<a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">油管</a>
+|<a href="http://www.gzgafk.com/" target="_blank" rel="noopener noreferrer">全能影视</a>|
 
-The website is currently organized into three main sections: CAD, CAE, and COX. 
+论坛：
+|<a href="https://www.v2ex.com" target="_blank" rel="noopener noreferrer">V2ex</a>
+|<a href="https://www.hostloc.com" target="_blank" rel="noopener noreferrer">全球主机论坛</a>|
 
-CAD, which stands for Computer-Aided Design, is a hub where I gather my reflections and learnings on mechanical design. 
+地图：
+|<a href="https://map.baidu.com/" target="_blank" rel="noopener noreferrer">百度地图</a>
+|<a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">谷歌地图</a>
+|<a href="https://m.amap.com/" target="_blank" rel="noopener noreferrer">高德地图</a>|
 
-CAE, for Computer-Aided Engineering, encompasses resources related to finite element analysis and product manufacturing processes. 
+AI工具：
+|<a href="https://kimi.moonshot.cn" target="_blank" rel="noopener noreferrer">Kimi</a>
+|<a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">ChatGPT</a>
+|<a href="https://yiyan.baidu.com/" target="_blank" rel="noopener noreferrer">文心一言</a>
+|<a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">Claude</a>|
 
-COX, or 'Cage of X', is a catch-all category  where 'X' symbolizes everything, capturing my explorations and contemplations on a diverse array of topics including history, technology, and literature. 
+新闻：
+|<a href="https://howhy.day" target="_blank" rel="noopener noreferrer"><font color="#ff0000">今日号外</font></a>|
 
-Naturally, I hold the ultimate authority for the interpretation and categorization of these contents.  As my interests grow and my knowledge deepens, the website's directory may also expand to include new categories.
+历史：
+|<a href="https://pastory.org" target="_blank" rel="noopener noreferrer"><font color="#ff0000">陈年往事</font></a>|

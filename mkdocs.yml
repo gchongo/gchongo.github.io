@@ -8,6 +8,9 @@ theme:
   # next: fontawesome/solid/angle-right
   language: zh
   features:
+    - search.suggest
+    - search.highlight
+    - search.share
     - navigation.instant # 即时加载
     - navigation.instant.prefetch #即时预取
     - navigation.instant.progress #进度指示器
@@ -20,6 +23,7 @@ theme:
     - navigation.top #返回顶部
     - navigation.footer #上一页和下一页
     - toc.follow #锚跟随
+
   # 自动亮/暗模式
   palette:
     # Palette toggle for light mode
@@ -49,26 +53,39 @@ extra:
     - icon: fontawesome/brands/pied-piper-alt
       link: https://howhy.day
       name: 今日号外
+extra_css:
+  - stylesheets/extra.css
+
+
 
 plugins:
   - search:
       lang: 
         - zh
         - en
+  - tags:
+      tags_file: tags.md
 
-extra_css: 
-  - css/mobile.css
+# extra:
+#  alternate:
+#    - name: English
+#      link: /en/ 
+#      lang: en
+#    - name: Chinese
+#      link: /zh/
+#      lang: zh
 
 nav:
-  - Home: 
-    - Navigation: navigation.md
-    - index.md
+  - Home:
+    - Navigation: index.md
+    - Tags: tags.md
+
   - CAD: 
     - Technical Drawing for Product Design: 
-      - 1.Introducing GD&T and GPS: blog/CAD/Introducing GD&T and GPS.md
+      - 1.Introducing GD&T and GPS: blog/CAD/Introducing GDT and GPS.md
       - 2.The Geometrical Product Specification (GPS) Language: blog/CAD/The Geometrical Product Specification (GPS) Language.md
       - 3.Dimensioning with Geometrical Tolerances: blog/CAD/Dimensioning with Geometrical Tolerances.md
-      - 4.The GPS and GD&T Language: blog/CAD/The GPS and GD&T Language.md
+      - 4.The GPS and GD&T Language: blog/CAD/The GPS and GDT Language.md
       - 5. Interdependence Between Dimensions and Geometry: blog/CAD//Interdependence Between Dimensions and Geometry.md
       - 6.Datums and Datum Systems: blog/CAD/Datums and Datum Systems.md
       - 7.Form Tolerances: blog/CAD/Form Tolerances.md
