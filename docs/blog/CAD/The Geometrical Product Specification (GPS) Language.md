@@ -76,3 +76,21 @@ perfectly straight axis and generatrix, and with the diameter equal to the toler
 
 ![](https://pics.caxer.net/2024/05/9cd992ad050654d5a44f088ed66c10e4.png)
 <center>Fig. 2.7 Some typical forms of three-dimensional tolerance zones</center>
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="gchongo/gchongo.github.io"
+        data-repo-id="R_kgDOL1P4-w"
+        data-category="General"
+        data-category-id="DIC_kwDOL1P4-84Cf98Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>

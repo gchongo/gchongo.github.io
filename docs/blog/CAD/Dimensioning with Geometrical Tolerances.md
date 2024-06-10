@@ -56,3 +56,21 @@ A further bonus of 0.3 mm is obtained when the hole is produced under the minimu
 | Tolerance zone       | • The tolerance zone is fixed in size<br>• Functional parts may be scrapped          | • The use of modifiers allows the tolerance zone to be increased<br>• Disputes over part acceptance are eliminated |
 | Tolerance zone shape | • Square or rectangular tolerance zone for hole locations                            | • A diameter symbol allows round tolerance zones to be obtained with +57% more tolerance                           |
 <p align="justify">Ultimately, GPS (or GD&T) is a symbolic language that can be used to search for, refine and encode the function of each feature of a part in the design phase, with the objective—through the decoding process—of guaranteeing assembly and functionality, specifying the manufacturing objectives, reducing the production costs and of transforming the control into a real scientific and reliable process.</p>
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="gchongo/gchongo.github.io"
+        data-repo-id="R_kgDOL1P4-w"
+        data-category="General"
+        data-category-id="DIC_kwDOL1P4-84Cf98Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
