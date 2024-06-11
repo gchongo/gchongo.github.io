@@ -10,14 +10,18 @@
 
 论坛：
 |<a href="https://www.v2ex.com" target="_blank" rel="noopener noreferrer">V2ex</a>
-|<a href="https://www.hostloc.com" target="_blank" rel="noopener noreferrer">全球主机论坛</a>|
+|<a href="https://www.hostloc.com" target="_blank" rel="noopener noreferrer">全球主机论坛</a>
+|<a href="https://www.mfcad.com/" target="_blank" rel="noopener noreferrer">沐风网</a>
+|<a href="https://www.vx.com/" target="_blank" rel="noopener noreferrer">3D模型下载</a>
+|<a href="https://www.xuexiniu.com/" target="_blank" rel="noopener noreferrer">学犀牛中文网</a>
+|<a href="https://www.ugsnx.com/forum.php" target="_blank" rel="noopener noreferrer">UG爱好者论坛</a>|
 
 地图：
 |<a href="https://map.baidu.com/" target="_blank" rel="noopener noreferrer">百度地图</a>
 |<a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">谷歌地图</a>
 |<a href="https://m.amap.com/" target="_blank" rel="noopener noreferrer">高德地图</a>|
 
-AI工具：
+工具：
 |<a href="https://kimi.moonshot.cn" target="_blank" rel="noopener noreferrer">Kimi</a>
 |<a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">ChatGPT</a>
 |<a href="https://yiyan.baidu.com/" target="_blank" rel="noopener noreferrer">文心一言</a>
@@ -28,3 +32,5 @@ AI工具：
 
 历史：
 |<a href="https://pastory.org" target="_blank" rel="noopener noreferrer"><font color="#ff0000">陈年往事</font></a>|
+
+

@@ -98,21 +98,21 @@ nav:
       
 
   - CAE:
-    - 文章3: blog/CAE/P3.md
-    - 文章4: blog/CAE/P4.md
+    - 注塑机合模参数设置: blog/CAE/注塑机合模参数设置.md
+    - 比亚迪汽车如何解决行李箱外板上段的侧整形起皱: blog/CAE/比亚迪汽车如何解决行李箱外板上段的侧整形起皱.md
     - 机械设计手册:
       - 1. 公差设计: blog/CAE/AC.md
       - 2. 尺寸链: blog/CAE/AB.md
     
 
- # - CAM:
- #     - 
+  - CAM:
+      - 为什么螺丝钉都是顺时针拧紧？: blog/CAM/为什么螺丝钉都是顺时针拧紧？.md
  #     - 
  # - CAPP:
  #     - 
  #     -
-  - COX:
-    - Markdown: blog/COX/Markdown教程.md
+#  - COX:
+#    - Markdown: blog/COX/Markdown教程.md
 
 
 
