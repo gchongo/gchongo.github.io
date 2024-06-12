@@ -91,3 +91,90 @@ While, at the LMC state:
 ![](https://pics.caxer.net/2024/06/d8db8990b94fc391a4b0abbbe3be8c3e.png)
 <center>Fig. 5.12 Tolerance analysis charts for the component dealt with in Fig. 5.9; the workpieces in the chart on the left that fall into the yellow zone are rejected during the control, even though they are acceptable from a functional point of view; in the case of the use of a zero tolerance or RPR (chart on the right), the cyan area in the chart becomes larger, thus allowing a reduction in waste and more manufacturing flexibility to be achieved</center>
 <p align="justify">When the zero-tolerance concept, or the reciprocity requirement, is adopted, the cyan area in the chart becomes larger, thus allowing a reduction of the rejected parts and greater manufacturing flexibility.</p>
+
+
+## 5.2 Direct Indication of Virtual Size
+<p align="justify">The new ISO 2962 standard allows a designer to directly specify the value of the maximum virtual size or the least material virtual size. In this case, the calculated value of the virtual size should be indicated between brackets in the tolerance indicator. If a size is also specified for the considered feature, it should be considered as an independent specification according to ISO 14405–1. No collective requirement is created between the two specifications (size specification and geometrical specification) in the case of the direct indication of the maximum material or least material virtual size.</p>
+<p align="justify">When themaximummaterial requirement, MMR, applies to the tolerance feature, and the direct indication of virtual size is selected, then the value of the maximum material virtual size (MMVS) should be indicated after the M symbol between brackets (Fig. 5.13). The Ø symbol should be omitted when the feature of size is not a diameter. When a direct indication of the maximum material virtual size (MMVS) is selected, no geometrical tolerance value should be indicated before the symbol. The same rule applies to the LMR requirement (Fig. 5.14).</p>
+<p align="justify">When the maximum material requirement applies to a datum and the direct indication of virtual size is selected, then the maximum material virtual size (MMVS) for the datum should be indicated with a numerical value between brackets in the datum indicator, after the datum feature symbol, as shown in Fig. 5.15. TheØsymbol should be omitted when the feature size is not a diameter. It is necessary to point out that, for the interpretation of straightness, the extracted feature should not violate the maximum material virtual condition, MMVC, which has an MMVS diameter = 29.9 − 0.2 = 29.7 mm. The extracted feature should have a smaller local diameter than LMS = 29.9 mm and larger than MMS = 30.3 mm. The extracted feature of the datum feature should not violate the maximum material virtual condition, MMVC, which has an MMVS diameter = 29.5 mm. At the same time, the extracted feature of the toleranced feature should not violate the maximum material virtual condition, MMVC, which has an MMVS diameter = 49.9 mm. The same feature should have a smaller local diameter than LMS = 50.4 mm and larger than MMS = 50 mm. The MMVC is located at 0 mm from the axis of the MMVC of the datum feature.</p>
+![](https://pics.caxer.net/2024/06/cdee91f85a851dbba50fe7717c9d936c.png)
+<center>Fig. 5.13 Direct indication of an MMVS on an external feature</center>
+
+![](https://pics.caxer.net/2024/06/fed734bf16f992e4048214724fe16f12.png)
+<center>Fig. 5.14 Direct indication of an LMVS on an external feature </center>
+
+![](https://pics.caxer.net/2024/06/5f4e23f7faf4de6fc4d3646d7426ae8a.png)
+<center>Fig. 5.15 Example of a direct indication of an MMVS on a datum</center>
+
+
+## 5.3 When to Use MMR, LMR, and RFS
+<p align="justify">The decision to choose an RFS, MMR, LMR or RPR requirement depends on the function of the workpiece. MMR is generally chosen when the parts have to be assembled with a mating with clearance (i.e. fixed fastener), but it is useful to allow additional maximum tolerances to reduce the manufacturing costs.</p>
+<p align="justify">LMR is useful when a designer has the goal of guaranteeing a minimum distance or a critical wall thickness. RPR is used to enlarge the size tolerance, for example, in a non-functional assembly. Finally, RFS (without any modifier) is used when any additional tolerance, such as the control of a position tolerance of a locating pin, can compromise the functionality of the workpiece.</p>
+<p align="justify">It should be noted that, in many cases, an additional tolerance does not have any impact on the function, and therefore does not make the part work better. The additional variation allowed byMMRmay lead to a reduction in the cost ofmanufacturing parts, as it may allow certain functional parts to pass inspection.</p>
+<p align="justify">Figure 5.16 in fact shows a typical application in which it is appropriate to use the MMR to guarantee the correct position of a sensor, which is positioned by means of a screw. These parts have a fixed fastener mating, that is, one of the parts has a threaded hole, and the other has a clearance hole. In this case, the position of the sensor holder only depends on the threaded hole. The screw has a mating clearance with the plate (Fig. 5.17), and the clearance hole position error therefore does not affect the position of the sensor. In this case, any additional tolerance does not have an impact on the function, and it is convenient to specify the maximum material requirement.</p>
+<p align="justify">In the second case in Fig. 5.18, the sensor support is only positioned by means of a dowel pin, which allows mating with only a slight interference with the plate. However, the error in locating the hole in the platewill affect the position of the sensor, and it is therefore better not to further increase the amount of tolerance through the use of an MMR modifier (Fig. 5.19).</p>
+<p align="justify">In the latter case, the connection of the sensor support is obtained with a pin from the same support, which is connected, with a clearance fit, to the plate (Fig. 5.20). The worst condition, which affects the location of the sensor, occurswhen the hole has the maximum allowed dimensions LMS (and when the pin has the minimum allowed diameter LMS). In such a case, it is useful to use the LMR modifier. Figure 5.21 shows that when assuming an MMVS mating pin size of 12.8 mm and accepting a sensor position error of less than 1 mm, the hole is produced with a smaller size, and it is possible to increase the localisation tolerance so that the LMR requirement guarantees the minimum position error and the maximum admissible tolerance.</p>
+![](https://pics.caxer.net/2024/06/bc50f31b063c7ec7856a32b3682ad4ea.png)
+<center>Fig. 5.16 A fixed fastener assembly: the designer has the goal of guaranteeing the correct position of a sensor</center>
+![](https://pics.caxer.net/2024/06/6c90d552276f2c8226d8e3d7a8984bd5.png)
+<center>Fig. 5.17 The clearance hole position error does not affect the position of the sensor</center>
+![](https://pics.caxer.net/2024/06/776903c7b8e74b487a1a7c4c3bdec597.png)
+<center>Fig. 5.18 The sensor support is only positioned by means of a dowel pin</center>
+![](https://pics.caxer.net/2024/06/be52d3f9f3086c3c1a6a27e7de306096.png)
+<center>Fig. 5.19 A dowel pin which provides a mating with only a slight interference with the plate. The error in locating the hole in the plate will affect the position of the sensor, and it is therefore better not to further increase the amount of tolerance through the use of an MMR modifier</center>
+![](https://pics.caxer.net/2024/06/5f54d6a373124996a4824be7a5d93c5f.png)
+<center>Fig. 5.20 The worst condition that can affect the location of the sensor, occurs when the hole has the maximum allowed dimensions LMS (and when the pin has the minimum allowed diameter, LMS); it is therefore useful to use an LMR modifier</center>
+
+
+## 5.4 The MMR and LMR Requirements in the ASME Standards
+<p align="justify">The ASME standard does not use the term “requirement” to specify an interdependence between size and geometric tolerance, but, depending on its function, the form deviation of a feature of size is always controlled by its size and any applicable geometric tolerances.</p>
+<p align="justify">In the ASME Y14.5:2018 standard, the modifiers M and L are introduced in Sect. 5.9 through Rule #2: “RFS is the default condition for geometric tolerance values. The Maximum Material Condition (MMC) or Least Material Condition (LMC) modifier may be applied to a geometric tolerance value to override the RFS default”.</p>
+<p align="justify">The concept of MaximumMaterialCondition (MMC)or LeastMaterialCondition (LMC) is used to describe the size limit of a feature of size at which the part contains the maximum or minimum amount of material. An MMC size limit combined with Rule #1 describes a boundary of perfect form at the MMC.</p>
+![](https://pics.caxer.net/2024/06/ce0f6098335189b7deea96a994efb993.png)
+<center>Fig. 5.21 If an MMVS mating pin size of 12.8 mm is assumed and a sensor position error of less than 1 mm is accepted, then the LMR requirement guarantees the minimum position error and the maximum admissible tolerance</center>
+<p align="justify">In the GD&T language, a set of symbols, called “modifiers”, is used to communicate additional information about the drawing or tolerancing of a part. The MMC M or LMC L material condition modifier may be applied to a geometric tolerance value to override the RFS default. </p>
+<p align="justify">However, the ASME standard distinguishes the MMC (or LMC) specification applied to a feature of size from the MMB (MaximumMaterial Boundary) (or Least Material Boundary, LMB) specification applied to each datum feature reference.</p>
+<p align="justify">MMB is the worst-case boundary that exists on or outside the material of a feature(s) and it is obtained as a result of the combined effects of size and geometric tolerances.</p>
+<p align="justify">LMB is theworst-case boundary that exists on or inside thematerial of a feature(s) and it is obtained as a result of the combined effects of size and geometric tolerances.</p>
+<p align="justify">RFS is the default condition for geometric tolerance values, while RMB (Regardless Material Boundary) is the default condition for a datum. An MMB or LMB material boundary modifier may be applied to a datum feature reference to override an RMB default.</p>
+<p align="justify">Consistently with the ISO specification (see Table 5.1), circular run-out, total run-out and orientation tolerances applied to a surface, profile of a line, profile of a surface, circularity or cylindricity cannot be modified to apply an MMC or LMC.</p>
+<p align="justify">When a geometric tolerance, applied to a feature of size, is specified with anMMC or LMC modifier, a constant boundary (named Virtual Condition, VC) is generated from the collective effects of the MMC or LMC modifier and the geometric tolerance of that material condition. This virtual condition (or Worst-Case Boundary, WCB) is the extreme boundary that represents the worst-case for such functional requirements, such as clearance, assembly with a mating part, thin wall conservation or hole alignment.</p>
+<center>Table 5.1 Applicability of MMR or LMR with the various characteristic geometrical symbols</center>
+![](https://pics.caxer.net/2024/06/eac9f190e1755226abb7747cff94b87d.png)
+<p align="justify">Figure 5.22 shows the collective effects of MMC and the applicable tolerances. The increase in size of the position tolerance zone in the table is commonly referred to as “bonus tolerance” in ASME and is viewed by many to be “extra tolerance for free”.</p>
+<p align="justify">Figure 5.23 illustrates the concept of inner boundary, a worst-case boundary generated from the collective effects of the smallest feature of size (MMC for an internal feature of size, LMC for an external feature of size) and the applicable geometric tolerance. An outer boundary is a worst-case boundary generated from the collective effects of the largest feature of size (LMC for an internal feature of size, MMC for an external feature of size) and the applicable geometric tolerance.</p>
+<p align="justify">The resultant condition (RC) is the single worst-case boundary generated from the collective effects of a specified MMC or LMC of a feature of size, the geometric tolerance of that material condition, the size tolerance, and the additional geometric tolerance derived from the departure of the feature from its specified material condition.</p>
+![](https://pics.caxer.net/2024/06/a07cc530beed12fc8b121fb16beb95c6.png)
+<center>Fig. 5.22 Collective effects ofMMCand applicable tolerances. The increase in size of the position tolerance zone in the table is commonly referred to as “bonus tolerance” in ASME</center>
+![](https://pics.caxer.net/2024/06/100dcbf0c5c79c98f1b35eed766ac5bc.png)
+<center>Fig. 5.23 Virtual and Resultant Condition Boundaries for an internal feature, using an MMC modifier</center>
+
+<center>Figures 5.24 and 5.25 show the same concepts applied to an external feature, that is, a plate with two pins. By using the inner and outer boundary values, it is possible to calculate the minimum and maximum distances between the two pins measured with a gauge (Fig. 5.26).</center>
+<p align="justify">As seen in the ISO standard, in cases where the MMB or LMB boundary is not clear, or another boundary is required, the value of a fixed-size boundary can be indicated, enclosed in brackets, following the applicable datum feature reference and any modifier (Fig. 5.27).</p>
+![](https://pics.caxer.net/2024/06/d6c98b89166551a80402bfc2f1f91d57.png)
+<center>Fig. 5.24 Collective effects of MMC and the applicable tolerances for an external feature</center>
+![](https://pics.caxer.net/2024/06/67784d59c65ddc84dfa1685534b8d0c9.png)
+<center>Fig. 5.25 Virtual and Resultant Condition Boundaries for an external feature, using an MMC modifier</center>
+![](https://pics.caxer.net/2024/06/ae79a62b41077b3957fa1ee77b3825be.png)
+<center>Fig. 5.26 By using the inner and outer boundary values, it is possible to calculate the minimum and maximum distances between the two pins measured with a gauge</center>
+
+<p align="justify">Table 5.1 shows whether it is possible or not, to use MMR or LMR with the various characteristic geometrical symbols. These rules are in force in both the ISO and ASME standards.</p>
+![](https://pics.caxer.net/2024/06/7149924a09e409dc5e281b523c637430.png)
+<center>Fig. 5.27 Explicit Specification of True Geometric Counterpart Boundaries in the ASME standard</center>
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="gchongo/gchongo.github.io"
+        data-repo-id="R_kgDOL1P4-w"
+        data-category="General"
+        data-category-id="DIC_kwDOL1P4-84Cf98Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
