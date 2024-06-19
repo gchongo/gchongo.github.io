@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/CAE/比亚迪汽车如何解决行李箱外板上段的侧整形起皱.md",
+                "file": "blog/CAD/Datums and Datum Systems.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/CAE/比亚迪汽车如何解决行李箱外板上段的侧整形起皱.md",
+                "file": "blog/CAD/Datums and Datum Systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/CAE/比亚迪汽车如何解决行李箱外板上段的侧整形起皱.md",
+                "file": "blog/CAD/Datums and Datum Systems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/CAE/比亚迪汽车如何解决行李箱外板上段的侧整形起皱.md"
+                "file": "blog/CAD/Datums and Datum Systems.md"
               }
             }
           }
@@ -148,9 +148,15 @@
   },
   "active": "38cce3ab6330f8ed",
   "lastOpenFiles": [
-    "blog/CAE/注塑机合模参数设置.md",
-    "blog/CAD/Interdependence Between Dimensions and Geometry.md",
     "blog/CAD/Introducing GDT and GPS.md",
+    "blog/CAD/Datums and Datum Systems.md",
+    "blog/CAD/Linear Sizes.md",
+    "blog/CAD/Form Tolerances.md",
+    "blog/CAD/Dimensioning with Geometrical Tolerances.md",
+    "blog/CAD/Interdependence Between Dimensions and Geometry.md",
+    "index.md",
+    "blog/CAE/比亚迪汽车如何解决行李箱外板上段的侧整形起皱.md",
+    "blog/CAE/注塑机合模参数设置.md",
     "e67a6b6a684b3fa6a8e9189b928d8c23.jpg",
     "de9db6eedb603744f1a2f7822a4f2aee.jpg",
     "cf78d79dc8541b2cd5daee0378f07284.jpg",
@@ -161,17 +167,14 @@
     "016d42cd81d08253f0ab17e3cd138a00.jpg",
     "blog/CAE/AB.md",
     "blog/CAE/AC.md",
-    "blog/CAE/比亚迪汽车如何解决行李箱外板上段的侧整形起皱.md",
     "blog/Template/Template.md",
     "blog/CAD/The GPS and GDT Language.md",
     "blog/CAM/为什么螺丝钉都是顺时针拧紧？.md",
-    "index.md",
     "navigation.md",
     "blog/COX/未命名.md",
     "blog/CAM",
     "blog/COX/Markdown教程.md",
     "blog/CAD/The Geometrical Product Specification (GPS) Language.md",
-    "blog/CAD/Dimensioning with Geometrical Tolerances.md",
     "2024-01-31.md",
     "blog/Template",
     "blog/Template.md",
@@ -179,8 +182,6 @@
     "stylesheets",
     "tags.md",
     "blog/CAD/Location Tolerances.md",
-    "blog/CAD/Linear Sizes.md",
-    "blog/CAD/Datums and Datum Systems.md",
     "blog/CAD/The GPS and GD&T Language.md",
     "blog/CAD/Introducing GD&T and GPS.md",
     "导航.md",
