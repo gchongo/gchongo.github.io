@@ -82,3 +82,227 @@ straight line, plane, or a combination thereof) that constitutes the datum.</p>
 ![](https://pics.caxer.net/2024/06/e4478574ea051fb06b0cf7eb7d0c8d49.png)
 <center>Table 6.1 All surfaces are classified into seven classes on the basis of the degrees of
 freedom for which the surface is invariant</center>
+
+## 6.2 Indication of Datum Features in Technical Documentation
+<p align="justify">A datum feature is identified with a capital letter, written within a square, and connected to a triangle that is placed on the feature itself (Fig. 6.10). It is suggested to avoid the use of the letters I, O, Q, X, Y and Z, which could give rise to interpretation problems, while, in the case of complex drawings, it is possible to make use of double letters (AA, BB, etc.).</p>
+<p align="justify">In the same way as for the tolerance indications, a triangle, with its identification letter, can be located:</p>
+<p align="justify">(a) on the contour line of the feature surface or on an extension line of the feature outline (but clearly separated from the dimension line) if the datum feature is the surface itself (Fig. 6.11); it is also possible in this case to use a leader line that points directly towards the datum surface (Fig. 6.12).</p>
+<p align="justify">(b) on an extension of the dimension line of a feature of size when the datum is the feature axis or centerplane of the thus dimensioned part (Fig. 6.13); in this case, for space reasons, it is possible to substitute one of the arrowheads of the measurement line with a datum triangle symbol.</p>
+![](https://pics.caxer.net/2024/06/db9a74707a19500078b7c53db1288652.png)
+<center>Fig. 6.10 The three ways of indicating a flat surface as a datum feature</center>
+
+<p align="justify">It is necessary to pay particular attention to the correct indication of a datum applied to a feature of size on a drawing: the line of the symbol should coincide with the dimension line of the datum feature, and the indication errors shown in Fig. 6.14 should be avoided.</p>
+![](https://pics.caxer.net/2024/06/07c5ec18849f8e334294aae5bc7c7b89.png)
+<center>Fig. 6.11 Indications of a datum feature. A triangle does not need to be filled in</center>
+![](https://pics.caxer.net/2024/06/beb9ee23d390fbcb730ace70bd2ef116.png)
+<center>Fig. 6.12 Indications of a datum feature: the dashed leader line indicates that the datum is on the other side (when the considered surface is hidden)</center>
+![](https://pics.caxer.net/2024/06/53edfbe3e15f6867ef5f07216af2b9e9.png)
+<center>Fig. 6.13 Indication of a datum feature for a feature of size</center>
+![](https://pics.caxer.net/2024/06/b6b726516db47c33f975d1d3c17917bf.png)
+<center>Fig. 6.14 Possible errors in the indications of a datum axis. Cylindrical surfaces should not be used as datums. The symbol line should coincide with the dimension line of the datum feature</center>
+
+<p align="justify">In light of all the definitions that have been given so far, does the datum symbol that is utilised in technical drawings indicate a datum or a datum feature (Fig. 6.15)? The symbol obviously indicates a datum feature and not a datum!</p>
+
+## 6.3 The Datum Systems in ASME Y14.5
+<p align="justify">TheASMEY14.5 standardmakes a clear distinction between the concept of a datum feature, a datum and a datum feature simulator Adatum is an abstract geometrical feature (point, axis or plane from which a dimensional measurement is made), which represents the perfect counterpart of a datum feature (e.g. an ideal plane or the axis of the perfect geometrical counterpart).</p>
+![](https://pics.caxer.net/2024/06/1422e3ad38938e0a698146e735d7a89d.png)
+<center>Fig. 6.15 Does the symbol, that is used in technical drawings, indicate a datum or a datum feature? The symbol obviously indicates a datum feature and not a datum</center>
+
+<p align="justify">Simulated datums are conceptually perfect (almost physically perfect), and they represent a bridge between the imperfect real world of datum features and the perfect imaginary world of datums. Ultimately, it is opportune to distinguish between the real datum feature of a workpiece (named datum feature) and the datum, that is, the equivalent theoretical datum (plane, axis or centerplane), as simulated by the associated inspection or manufacturing equipment.</p>
+<p align="justify">The datum system of a tool machine is shown in Fig. 6.16: the production equipment has the task of aligning the features of the workpiece with the datums of the machine (for example, datum feature A is aligned with the clamping machine and datum feature B is made to coincide with the z axis). In short, no datums exist on a workpiece, but they are simulated by the datum feature system of the tool machine.</p>
+<p align="justify">The true geometric counterpart is the theoretically perfect boundary used to establish a datum from a specified datum feature. True geometric counterparts have a perfect form, and a basic orientation and location relative to other true geometric counterparts for all the datum references in a feature control frame. Furthermore, the true geometric counterparts are adjustable in size, when the datum feature applies an RMB (Regardless Material Boundary), and are fixed at the designated size, when an MMB(MaximumMaterial Boundary) or an LMB ( Least Material Boundary)  is specified.</p>
+<p align="justify">The relationship between the primary datum feature and its true geometric counterpart constrains the degrees of freedom. Table 6.2 shows some examples of degrees of freedom constrained by primary datum features, RMB, in the same way as for the concept of invariance class.</p>
+![](https://pics.caxer.net/2024/06/bcf290b8a187ed94c426dd84937a0bc1.png)
+<center>Fig. 6.16 No datums exist on a workpiece, but they are simulated by the datum feature system of the tool machine (physical datum simulators)</center>
+
+<center>Table 6.2 Constrained degrees of freedom for primary datum features</center>
+![](https://pics.caxer.net/2024/06/ce90d8da45ac4084620fc7ff7e421810.png)
+
+### 6.3.1 Establishing a Datum
+<p align="justify">In the case of a datum surface made up of a flat surface of a component, the datum is supplied by a theoretical envelope plane (e.g. a tangent plane, the true geometric
+counterpart), of perfect geometrical form, and the simulated datum feature is constituted,
+for example, by the surface plate of the inspection device. As can be seen in
+Fig. 6.17, it is also possible to define a theoretical envelope plane, of perfect form
+(true geometric counterpart of a datum feature), on the surface plate; if the workpiece
+is placed on the surface plate, the two theoretical planes might not coincide because
+of the irregularities on the surfaces. In spite of this observation, a simulated datum is
+in fact used as a datum in industrial practice. Such a distinctionmay appear excessive
+but, in reality, many errors exist and much confusion arises in defining the datums
+and in the inspection of the parts with measuring machines.</p>
+<p align="justify">If, instead, the datum feature is a feature of size, the symbol should be associated with a linear dimension (subject to tolerance) and should therefore be placed directly
+on the dimension, as shown in Fig. 6.18; in this case, the datum is made up of the axis or centerplane, which is established by an ideal envelope surface.</p>
+![](https://pics.caxer.net/2024/06/6980a5e78cba8ed5b58e241c48ae2c25.png)
+<center>Fig. 6.17 Establishment of a datum plane</center>
+![](https://pics.caxer.net/2024/06/302e67bad838a54bb774f75758bb279c.png)
+<center>Fig. 6.18 Placement of Datum Feature Symbols on Features of Size</center>
+![](https://pics.caxer.net/2024/06/5f0c3364755b518ca0d5627b793a00d8.png)
+<center>Fig. 6.19 When a cylindrical feature is designated as a datum feature, the datum axis is derived by placing the part in an adjustable gauge (self-centring chuck used as a datum feature simulator)</center>
+
+<p align="justify">Figure 6.19 shows the case of a datum made up of the axis of a cylinder; again
+in this case, it is possible to make a distinction between the axis of the smallest true
+geometric counterpart and the simulated datum feature, defined as the axis of the
+feature simulated by the verification gauge. As axes do not exist in the real world,
+the equivalent theoretical feature is represented, in the case of external features, by
+the axis of the smallest cylinder restricted by a perfect form. The datum is simulated
+by the verification device, for example, with a gauge or a self-centring device.</p>
+<p align="justify">In the case of cylindrical holes, the simulated datum can be established through the
+use of a cylindrical gauge, with themaximum inscribable diameter, or an expandable
+chuck; whatever the type of chuck, once inserted into the hole, it does not take on
+a fixed shape, and it is necessary to regulate it so that any displacements are of the
+same magnitude in all directions (it is obvious that no modifiers should be applied
+to the datum).</p>
+<p align="justify">In short, it is necessary to pay a great deal of attention to the characterisation
+of the simulated theoretical cylinder (which the ASME standards define as Actual
+Mating Envelope, AME). In the simplest case, the cylinder is orientated according
+to the axis of the imperfect hole, but when the axis of the hole is defined on the basis
+of one or two datums, the simulated cylinder (Related Actual Mating Envelope) is
+arranged according to the DRF or Datum Reference Frame.</p>
+<p align="justify">Figure 6.20 further clarifies the meaning of the related and unrelated Actual
+Mating Envelopes: datum A is a plane, while datum B is the axis of a 34 mm
+cylinder, orientated with an error of 0.05 mm with respect to plane A; the 10 mm
+hole is located with respect to datums A and B. The axis of the feature of size is obtained from the smallest restricted orientated cylinder (the unrelated actual mating
+envelope) and it is useful to verify a perpendicularity error with respect to datum A.
+The smallest circumscribed cylinder perpendicular to A (the related actual mating
+envelope) is used to determine the axis of datum B. The derived centerplane is a
+curve made up of the central points of the transversal section perpendicular to the
+axis of the feature of size, and it is used to determine the straightness error.</p>
+<p align="justify">It is necessary to avoid confusing the axis of a feature of size (obtained through
+the smallest circumscribed cylinder orientated according to the feature, Fig. 6.21)
+for the axis of the datum B (perfect geometrical counterpart perpendicular to datum
+A).</p>
+![](https://pics.caxer.net/2024/06/a10995f6401dd7db4b5f1772195d46b9.png)
+<center>Fig. 6.20 Related and Unrelated AME in the ASME standard</center>
+
+### 6.3.2 Location of a Workpiece in a Datum Reference Frame
+<p align="justify">Simulated datums have the purpose of defining a DRF (Datum Reference Frame),
+that is, the datum system of 3 perpendicular planes that define the origin for the
+measurements and which allow the workpiece to be blocked during an inspection
+(Fig. 6.22). In short, the indications of aDRF system supply an immediate description
+of the orientation and of the location of a workpiece (and of the tolerance zones),
+thus making the inspection operations univocal and repeatable.</p>
+<p align="justify">In order to limit the movement of a part so that repeatable measurements can be
+made, it is necessary to restrict the six degrees of freedom. In fact, each piece that
+has to be controlled or worked in a datum system has six degrees of freedom (3
+linear and 3 rotational, Fig. 6.23). It is possible to show that, in order to eliminate
+the 6 degrees of freedom, it is necessary to block the workpiece in a datum reference frame with 3 perpendicular planes, named the primary, secondary and tertiary planes,
+respectively.</p>
+![](https://pics.caxer.net/2024/06/28dc0a39458d9229c6d6a43d9a7632bb.png)
+<center>Fig. 6.21 It is necessary to be careful not to confuse the axis of a feature size (obtained through the
+largest circumscribed cylinder orientated according to the feature), which is useful to control the
+perpendicularity of a 40 mm hole, with the axis of datum B (axis of the largest inscribable cylinder
+perpendicular to datum A)</center>
+![](https://pics.caxer.net/2024/06/7afccb9da9677be270cad252fc2ce76c.png)
+<center>Fig. 6.22 DRF (Datum Reference Frame)</center>
+![](https://pics.caxer.net/2024/06/b4eec13a036465e8b5ac3373acd70a1d.png)
+<center>Fig. 6.23 The six degrees of freedom of a workpiece: any movement in the space can be attributed to three possible translations in the direction of the datum axes X, Y and Z and to three rotations, u, v and w, around the same axes</center>
+<p align="justify">Let us consider the drawing of the component shown in Fig. 6.24, whose holes
+are located with respect to the three datums A, B and C; in order to conduct a
+measurement test, datum featureAis put into contact with datum feature simulator A,
+thus establishing a primary datum with at least three points of contact, and eliminating
+a degree of linear freedom Z and two rotational degrees of freedom, that is, u and v
+(Fig. 6.25).</p>
+<p align="justify">Datum feature B is then put in contact with datum feature simulator B, and in this
+way secondary datum B is established, with a minimum of two points of contact and
+elimination of a linear degree, X, and a rotational one w (Fig. 6.26). Finally, tertiary
+datum C is defined with just a single point of contact and the last degree of freedom
+Y is eliminated by putting datum feature C in contact with its simulator (Fig. 6.27).</p>
+![](https://pics.caxer.net/2024/06/8a2758890b63c656eae3d5df571c026a.png)
+<center>Fig. 6.24 In order to make the identification of a datum reference frame clearer, the ASME Y14.5
+standard introduced the possibility of identifying the axes of the datum system on a drawing in
+order to offer an immediate description of the orientation and location of a workpiece (and of the
+relative tolerance zone), thus making the measurement test operations univocal and repeatable</center>
+![](https://pics.caxer.net/2024/06/c1a59bfaee6a4ffee2e93f8772b78ba5.png)
+<center>Fig. 6.25 Datum feature A of the component is put in contact with the datum feature simulator, and
+in this way a primary datum is established, with a minimum of three contact points and elimination
+of a degree of freedom Z and two rotational ones, that is, u and v. The X, Y and w degrees of
+freedom still have to be constrained</center>
+![](https://pics.caxer.net/2024/06/e0ed0eec6d618415f5ae62ca66a2b254.png)
+<center>Fig. 6.26 Subsequently, datum feature B is put in contact with datum feature simulator B, and in this way the secondary datum is established, with a minimum of two contact points and elimination of a linear degree, X, and a rotational one w. The translation along Y still has to be constrained</center>
+![](https://pics.caxer.net/2024/06/44e044bf60cae8cbf64a345c81f8f0d5.png)
+<center>Fig. 6.27 Final blocking of the workpiece: tertiary datum C is defined with at least one point of contact (and elimination of the last degree of linear freedom Y), thus datum feature C is placed in relation to its simulator</center>
+![](https://pics.caxer.net/2024/06/c35481333309cd8be9b6295a5539345a.png)
+<center>Fig. 6.28 The order of the datums in the tolerance frame indicates the sequence of the inspection operations; as can be seen, the location dimension of the hole changes according to the datum plane on which the workpiece is placed</center>
+<p align="justify">It is necessary to pay particular attention to the order of the datum sequence as
+it influences the result of an inspection. In fact, if the inspection procedure of the
+workpiece in Fig. 6.28 is considered, it can be noted that, as the location tolerances
+have been indicated in the datum order A, B and C in the frame, the inspection
+procedure should be conducted after locating the workpiece in the datum system
+according to the exact same order. A change in this order (i.e. A, C, B) would
+influence the measurement test, as can be seen in the same figure.</p>
+
+### 6.3.3 Selection of Datum Features
+<p align="justify">The starting point for a correct dimensioning is the identification of a datum reference
+frame with 3 perpendicular planes (DRF), and in this way functioning and mating of
+the parts are guaranteed. As previously mentioned, it is erroneous to think that the
+datums should only be established in the manufacturing design phase on the basis
+of the requirements of the various operations. Datums should in fact be selected
+on the basis of the functional requirements of a part in order to allow the functional
+relationships to be communicated on the drawing. The datums should instead always
+be established on the basis of the functional requirements because, if the datums are
+chosen on the basis of the technological location of the workpieces, the tolerance
+available for manufacturing may be reduced.</p>
+<p align="justify">The choice of the datum features should obviously be considered in function of
+the assembly requirements of the parts, and their sequence very often reproduces
+the logical assembly sequence. The case shown in Fig. 6.29 can be considered as an
+example: the part with 2 holes should be mated to the plate by means of two fixed
+fasteners. The logical sequence that allows an appropriate choice of the three datums
+to be made is:</p>
+1. <p align="justify">identification of the feature that orientates the workpiece in the assembly, in order to establish the primary datum; in Fig. 6.30, the feature that orientates the workpiece is constituted by mating surface A.</p>
+2. <p align="justify">Identification of the feature that locates the workpiece in the assembly, in order to establish the secondary datum; datum feature B that locates the workpiece is represented by the axis of the two cylindrical features.</p>
+3.  <p align="justify">Identification of the feature that blocks the workpiece in the assembly, in order to establish the tertiary datum. Finally, tertiary datum C that blocks the workpiece, which is constituted by the milled surface of the component and of the corresponding surface of the plate, is added.</p>
+4.  <p align="justify">Qualification of the datum features through the application, orientation and location of opportune form tolerances.</p>
+5. <p align="justify">Location of all the geometrical features with reference to the datum features, while utilising the profile tolerances to locate the surfaces.</p>
+
+![](https://pics.caxer.net/2024/06/8a3468932a79bca14a5a9cde194579e7.png)
+<center>Fig. 6.29 Choice of the functional datums for a mating with fixed fasteners</center>
+![](https://pics.caxer.net/2024/06/cb93f568c018fd48d99f69d5500590e5.png)
+<center>Fig. 6.30 The feature that is used to orientate the workpiece is made up of mating surface A (which is defined as the primary datum), while the feature that is considered to locate it is the axis of the two cylindrical features (which is defined as a secondary datum). Finally, the tertiary datum that blocks the workpiece, which is constituted by themilled surface of the component and of the corresponding surface of the plate, is added</center>
+
+<p align="justify">The complete dimensioning of the upper component is reported in theASMEdrawing in Fig. 6.31. The dimensioning of the lower plate is obtained by following the same previously outlined rules.</p>
+<p align="justify">However, it is not always necessary to use three datums. The case shown in
+Fig. 6.32 can be considered as an example: the cover with the holes should be mated
+with the tank through fixed fasteners; the feature that orientates the workpiece is
+constituted by mating surface A (which is defined as the primary datum), while the
+feature that locates it is represented by the axis of the cylindrical part (which is defined
+as the secondary datum). When the axis of a cylinder is used as the datum feature, it is
+necessary to imagine using two perpendicular planes, whose intersection determines
+the datum axis, and which can rotate freely around the same axis (Fig. 6.33).</p>
+![](https://pics.caxer.net/2024/06/a06d6c77524b1186e8c323b21682d274.png)
+<center>Fig. 6.31 Complete dimensioning of a component with the 3 established functional datums. The primary datum is qualified with a planarity tolerance and the secondary one with a perpendicularity tolerance. Finally, the two holes in the plate are located with a location tolerance with respect to the three established datums</center>
+<p align="justify">If the assembly of the cover takes place as in Fig. 6.34, that is, the tongue must
+be mated with the relative groove, three datums are required, that is, it is necessary to add the tertiary datum that blocks the workpiece and which is constituted by the
+centerplane of the groove.</p>
+![](https://pics.caxer.net/2024/06/318ef5d8e8d27d76d411c288ea999460.png)
+![](https://pics.caxer.net/2024/06/1b5e4a9476c7a7ca105ddd71562c3f6a.png)
+<center>Fig. 6.32 Selection of the primary datum (used to orientate) and of the secondary datum (used to locate)</center>
+![](https://pics.caxer.net/2024/06/b223f2aba867f0816e2406a3323cb4aa.png)
+<center>Fig. 6.33 The axis of a cylinder that is used as a datum feature is associated with two imaginary perpendicular planes, whose intersection determines the datum axis, which can rotate freely around the same axis</center>
+<p align="justify">In this case, the two imaginary planes can no longer rotate and are constrained in a precise location (Fig. 6.35). Table 6.3 summarises the main differences between
+the ISO and ASME standards pertaining to the specification of a datum.</p>
+![](https://pics.caxer.net/2024/06/f5dbb23dc722c5b1c15561b99e2b6e0d.png)
+![](https://pics.caxer.net/2024/06/8d501a634cc3a05c03117dda727dbc98.png)
+<center>Fig. 6.34 Selection of the primary datum (used to orientate), of the secondary datum (used to locate) and of the tertiary datum (used to block)</center>
+![](https://pics.caxer.net/2024/06/d6ec619311b0d4ab3a09e9b45513b325.png)
+<center>Fig. 6.35 The second datum is constituted by an axis and the third by a centerplane: the two imaginary planes can no longer rotate and are constrained in a precise location</center>
+
+
+
+
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="gchongo/gchongo.github.io"
+        data-repo-id="R_kgDOL1P4-w"
+        data-category="General"
+        data-category-id="DIC_kwDOL1P4-84Cf98Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
