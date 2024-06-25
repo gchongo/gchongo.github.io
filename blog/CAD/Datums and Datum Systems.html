@@ -1,0 +1,1783 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Nullam urna elit, malesuada eget finibus ut, ac tortor.">
+      
+      
+      
+        <link rel="canonical" href="https://caxer.net/blog/CAD/Datums%20and%20Datum%20Systems.html">
+      
+      
+        <link rel="prev" href="Interdependence%20Between%20Dimensions%20and%20Geometry.html">
+      
+      
+        <link rel="next" href="Form%20Tolerances.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>6.Datums and Datum Systems - Hello CAXer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6-datums-and-datum-systems" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Hello CAXer" class="md-header__button md-logo" aria-label="Hello CAXer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hello CAXer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6.Datums and Datum Systems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.html" class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="Introducing%20GDT%20and%20GPS.html" class="md-tabs__link">
+          
+  
+    
+  
+  CAD
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../CAE/%E6%B3%A8%E5%A1%91%E6%9C%BA%E5%90%88%E6%A8%A1%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE.html" class="md-tabs__link">
+          
+  
+    
+  
+  CAE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../CAM/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%9E%BA%E4%B8%9D%E9%92%89%E9%83%BD%E6%98%AF%E9%A1%BA%E6%97%B6%E9%92%88%E6%8B%A7%E7%B4%A7%EF%BC%9F.html" class="md-tabs__link">
+          
+  
+    
+  
+  CAM
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hello CAXer" class="md-nav__button md-logo" aria-label="Hello CAXer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Hello CAXer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    CAD
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            CAD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical Drawing for Product Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Drawing for Product Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Introducing%20GDT%20and%20GPS.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.Introducing GD&T and GPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="The%20Geometrical%20Product%20Specification%20%28GPS%29%20Language.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.The Geometrical Product Specification (GPS) Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Dimensioning%20with%20Geometrical%20Tolerances.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.Dimensioning with Geometrical Tolerances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="The%20GPS%20and%20GDT%20Language.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.The GPS and GD&T Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Interdependence%20Between%20Dimensions%20and%20Geometry.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Interdependence Between Dimensions and Geometry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    6.Datums and Datum Systems
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Datums%20and%20Datum%20Systems.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    6.Datums and Datum Systems
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-datum-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Datum Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 Datum Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611-association-of-datums" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.1 Association of Datums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612-datum-mathematical-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.2 Datum: Mathematical Concepts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-indication-of-datum-features-in-technical-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Indication of Datum Features in Technical Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-the-datum-systems-in-asme-y145" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 The Datum Systems in ASME Y14.5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 The Datum Systems in ASME Y14.5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#631-establishing-a-datum" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.1 Establishing a Datum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-location-of-a-workpiece-in-a-datum-reference-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.2 Location of a Workpiece in a Datum Reference Frame
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-selection-of-datum-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.3 Selection of Datum Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Form%20Tolerances.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.Form Tolerances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Orientation%20Tolerances.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.Orientation Tolerances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Location%20Tolerances.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.Location Tolerances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Profile%20Tolerances.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.Profile Tolerances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Run-Out%20Tolerances.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.Run-Out Tolerances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometrical%20Specification%20for%20Non-Rigid%20Parts.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12.Geometrical Specification for Non-Rigid Parts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Linear%20Sizes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13.Linear Sizes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CAE
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            CAE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CAE/%E6%B3%A8%E5%A1%91%E6%9C%BA%E5%90%88%E6%A8%A1%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    注塑机合模参数设置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CAE/%E6%AF%94%E4%BA%9A%E8%BF%AA%E6%B1%BD%E8%BD%A6%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E8%A1%8C%E6%9D%8E%E7%AE%B1%E5%A4%96%E6%9D%BF%E4%B8%8A%E6%AE%B5%E7%9A%84%E4%BE%A7%E6%95%B4%E5%BD%A2%E8%B5%B7%E7%9A%B1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    比亚迪汽车如何解决行李箱外板上段的侧整形起皱
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    机械设计手册
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            机械设计手册
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CAE/AC.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 公差设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CAE/AB.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 尺寸链
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CAM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            CAM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CAM/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%9E%BA%E4%B8%9D%E9%92%89%E9%83%BD%E6%98%AF%E9%A1%BA%E6%97%B6%E9%92%88%E6%8B%A7%E7%B4%A7%EF%BC%9F.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    为什么螺丝钉都是顺时针拧紧？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-datum-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Datum Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 Datum Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611-association-of-datums" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.1 Association of Datums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612-datum-mathematical-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.2 Datum: Mathematical Concepts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-indication-of-datum-features-in-technical-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Indication of Datum Features in Technical Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-the-datum-systems-in-asme-y145" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 The Datum Systems in ASME Y14.5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 The Datum Systems in ASME Y14.5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#631-establishing-a-datum" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.1 Establishing a Datum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-location-of-a-workpiece-in-a-datum-reference-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.2 Location of a Workpiece in a Datum Reference Frame
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-selection-of-datum-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.3 Selection of Datum Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags.html#gtt" class="md-tag">GT&T</a>
+    
+  
+    
+    
+    
+      <a href="../../tags.html#datum" class="md-tag">Datum</a>
+    
+  
+</nav>
+
+
+
+<h1 id="6-datums-and-datum-systems">6. Datums and Datum Systems</h1>
+<h2 id="abstract">Abstract</h2>
+<p align="justify">A datum system has the purpose of defining a set of two or more ideal features established in a specific order (for example, a system made up of a triad of mutually orthogonal planes) that allows not only the tolerance zones to be orientated and located, but also their origin to be defined for the measurement, and the workpiece to be blocked during the control. When it is not desirable to use a complete integral feature to establish a datum feature, it is possible to indicate portions of the single feature (areas, lines or points) and their dimensions and locations using datum targets. This chapter illustrates the main differences between the ISO 5459 and ASME standards for the specification of datums and highlight some theoretical and mathematical concepts. This section also provides simple rules to follow whenever choosing functional datums to ensure the part will function as intended, with the least possible amount of variation.</p>
+<h2 id="61-datum-systems">6.1 Datum Systems</h2>
+<p align="justify">A datum system represents one of the most advantageous instruments to pass on information about functional relationships and, at the same time, to transmit the modalities and sequences with which the control of the component should be carried out in such a way that the inspection measurement is univocal and repeatable.</p>
+<p align="justify">The greatest disadvantage of the use of a datum system is that an adequate knowledge of the geometrical tolerance standards is necessary. In fact, a lack of attention to the functional aspects of geometrical dimensioning has led to some datum misconceptions. The first of these concerns the conviction that datums exist on a part, although the planes and axes taken as datums are in fact abstract concepts that are obtained through complex verification operations.</p>
+<p align="justify">Another misconception is that datums are established directly during the manufacturing design phase; in fact, the datums derived from operational requirements often do not agree with the ones that are fixed during the design phase on the basis of the functional requirements. If a process engineer introduces any modifications, the functional requirements will no longer be respected, because of changes in the tolerances (which often become more reduced).</p>
+<p align="justify">A datum should always be selected on the basis of the functions of a part, since choosing datums on the basis of the technological location of the workpieces can lead to a reduction in the available tolerances.</p>
+<p align="justify">Adatum system (known as DRF, Datum Reference Frame in theASMEstandards) is a set of two or more ideal features established in a specific order from two or more datum features, with the aim of (Fig. 6.1):</p>
+<ol>
+<li><p align="justify">defining the origin from which the location or geometric characteristics of the features of a part are established;</p></li>
+<li><p align="justify">allowing the workpiece to be blocked during a control, so that the control is univocal and repeatable;</p></li>
+<li><p align="justify">locating and orienting the tolerance zones.</p></li>
+</ol>
+<p align="justify">In short, datums allow a datum system to be defined for the dimensioning of a drawing and they can be considered as a way of blocking the degrees of freedom of a tolerance zone.</p>
+<p align="justify">The ISO 5459 standard specifies the terminology, rules and methodologies pertaining to the indication and comprehension of datums and of datum systems in the technical documentation of a product. The physical surfaces of real and imperfect parts are defined as datum features in the standard as they serve the purpose of constraining the rotational and translational degrees of freedom during the assembly processes and which can be used to define the datums (Fig. 6.2). In fact, each workpiece is considered to be made up of features that can have a size and an axis, or a symmetry plane (a feature of size such as a groove, a hole or a pin), or nondimensional features such as flat or cylindrical surfaces; as each feature can be considered as a datum, it is possible to have datums correlated to both sizeable and non-sizeable features, which are indicated on a drawing in different ways.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/fa6c229ae4bde89ca3ce40b6c28aa69c.png" />
+<center>Fig. 6.1 A datum system has the purpose of defining a set of two ormore ideal features, established in a specific order (for example, a system made up of a triad of mutually orthogonal planes), that allows not only the tolerance zones to be orientated and located, but also their origin to be defined for the measurement, and the workpiece to be blocked during the control</center></p>
+<p align="justify">A datum is a theoretically exact point, straight line, or plane from which the location and orientation of features, or both, can be defined (Fig. 6.3). A datum specification refers to the concept of a situation feature, which is obtained through an association criterion with the datum feature, that is, an ideal feature (plane, point or straight line) is associated with the true (extracted and filtered) surface.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/f3fa8ea9c32a38bdf5bda3dd73c1413c.png" />
+<center>Fig. 6.2 Datum features are particular physical features of real, imperfect, labelled workpieces that have the purpose of constraining the rotational and translational degrees of freedom of relative parts. Datums are the surfaces of the workpiece that can be touched, and they are suitable for associating to a datum</center>
+<img alt="" src="https://pics.caxer.net/2024/06/5e1350c1a39ca90354c29b7f2c3f76d8.png" />
+<center>Fig. 6.3 A datumis a theoretically exact point, straight line, or plane from which the location and orientation of features, or both, can be defined</center>
+<img alt="" src="https://pics.caxer.net/2024/06/10c7f11c92fecf0bd2720e25a6ae1217.png" />
+<center>Fig. 6.4 According to ISO 5459, a datum is one or more situation features (plane, point and/or straight line) that is selected to define the location or orientation, or both, of a tolerance zone or an ideal feature that represents, for instance, a virtual condition</center></p>
+<p align="justify">In short, a datum is one or more situation features of one or more features associated with one or more real integral features selected to define the location or orientation, or both, of a tolerance zone or an ideal feature that represents, for instance, a virtual condition (Fig. 6.4). Datums allow tolerance zones to be located or orientated and virtual conditions to be defined (for example, the maximum material virtual condition, according to ISO 2692).</p>
+<h3 id="611-association-of-datums">6.1.1 Association of Datums</h3>
+<p align="justify">A datum is a theoretically exact point, axis, or plane that is obtained through an association criterion with the datum feature, that is, an ideal feature (plane, point or line) which is associated with the true (extracted and filtered) surface. The objective of such an association is to obtain an unambiguous identification of unique datums or datum systems.</p>
+<p align="justify">In order to establish an associated feature, it is necessary to first perform a partition, then an extraction, a filtration and, finally, an association. The filtration should retain the highest points of the real integral feature.</p>
+<p align="justify">For example, in the case of a datum feature made up of a flat surface of a part, the extracted surface of a true geometry is obtained, through a partition and extraction process, to which an ideal tangent plane of a perfect geometrical form is associated (situation feature, Fig. 6.5). In practice, the ideal tangent plane is approximated from the smooth surface of a matching plane of a control system, as shown in Fig. 6.6.</p>
+<p align="justify">The associated features, used to establish the datums, simulate contact with the
+real integral features in a way that ensures that the associated feature is outside the
+material of the non-ideal feature. When the result of this process is ambiguous, then
+the associated featuremustminimise the maximum distance (normal to the associated
+feature) between the associated feature and the filtered feature (Fig. 6.7).</p>
+<p align="justify">The association process adopted to obtain an axis datum, starting from a true
+feature (integral) is shown in Fig. 6.8. The extracted feature is obtained through an
+extraction and filtration process; the derived feature (axis of the associated cylinder),
+and therefore the datum, are thus obtained through an association process with an
+ideal cylinder. In the same way as for a planar surface, in the case of cylindrical
+elements, the associated feature should minimise the maximum distance between
+the associated feature and the filtered feature (Fig. 6.9).</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/a8baa136ec24dc1383fb736406aaac3e.png" />
+<center>Fig. 6.5 The association process used to obtain a datum: the extracted surface is obtained from the true geometry, through a partition and extraction process, and an ideal tangent plane is associated with such a surface</center>
+<img alt="" src="https://pics.caxer.net/2024/06/ec8dac2c64f1b206b3f0900d3276ea88.png" />
+<center>Fig. 6.6 If the datum feature is the flat surface of a workpiece, the associated feature is obtained from a theoretical envelope plane (e.g. a tangent plane) of perfect geometrical form, and it may be approximated from the matching granite plane of the control device</center>
+<img alt="" src="https://pics.caxer.net/2024/06/b82a74daeeaca56dcc9b5a1f3ca98520.png" />
+<center>Fig. 6.7 The association method for a planar surface using the minimax criteria. 1. Outside the material tangent plane (datum). 2. Filtered feature. 3. Real integral feature</center></p>
+<h3 id="612-datum-mathematical-concepts">6.1.2 Datum: Mathematical Concepts</h3>
+<p align="justify">Datums and datum systems are theoretically exact geometric features used together with implicit or explicit theoretically exact dimensions (TED) to locate or orientate
+the tolerance zones and virtual conditions.</p>
+<p align="justify">Adatum consists of a set of situation features for an ideal feature (feature of perfect form) associated with the identified datum features of a workpiece. Since these ideal
+features have the task of blocking the degrees of freedom of the tolerance zones, the
+geometrical type of these associated features should be one of the invariance classes
+reported in Table 6.1.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/30408e478fc6a113cbe523dcbb36e226.png" />
+<center>Fig. 6.8 The association and derivation process used to obtain a datum axis from a cylinder: 1. Nominal integral feature. 2. Nominal derived feature. 3. Real integral surface of the workpiece (datum feature). 4. Extracted integral feature; 5. Association with an ideal cylinder. 6. Derived feature (axis of the associated cylinder). 7. Datum (situation feature)</center>
+<img alt="" src="https://pics.caxer.net/2024/06/4cfd5266f49c99fd069f5721c85de023.png" />
+<center>Fig. 6.9 The association method for a cylindrical surface using the minimax criteria. 1. Real
+integral feature. 2. Filtered feature. 3. Maximum inscribed cylinder</center></p>
+<p align="justify">Each feature has 6 degrees of freedom (translations along the x, y, z axes and
+rotations around the x, y, z axes). The invariance class corresponds to the degrees of
+freedom (which remain and are not locked). Such a class describes the displacement
+of the feature (translation, rotation) for which the feature is kept identical in space.</p>
+<p align="justify">In Table 6.1, all the surfaces are classified into seven classes on the basis of
+the degrees of freedom for which the surface is invariant. Situation features (point,
+straight line, plane) are defined for each class of surface.</p>
+<p align="justify">When a single surface or a collection surface is identified as a datum feature,
+the invariance degrees for which the surface is invariant should be identified and compared with Table 6.1 in order to determine the set of situation features (point,
+straight line, plane, or a combination thereof) that constitutes the datum.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/e4478574ea051fb06b0cf7eb7d0c8d49.png" />
+<center>Table 6.1 All surfaces are classified into seven classes on the basis of the degrees of
+freedom for which the surface is invariant</center></p>
+<h2 id="62-indication-of-datum-features-in-technical-documentation">6.2 Indication of Datum Features in Technical Documentation</h2>
+<p align="justify">A datum feature is identified with a capital letter, written within a square, and connected to a triangle that is placed on the feature itself (Fig. 6.10). It is suggested to avoid the use of the letters I, O, Q, X, Y and Z, which could give rise to interpretation problems, while, in the case of complex drawings, it is possible to make use of double letters (AA, BB, etc.).</p>
+<p align="justify">In the same way as for the tolerance indications, a triangle, with its identification letter, can be located:</p>
+<p align="justify">(a) on the contour line of the feature surface or on an extension line of the feature outline (but clearly separated from the dimension line) if the datum feature is the surface itself (Fig. 6.11); it is also possible in this case to use a leader line that points directly towards the datum surface (Fig. 6.12).</p>
+<p align="justify">(b) on an extension of the dimension line of a feature of size when the datum is the feature axis or centerplane of the thus dimensioned part (Fig. 6.13); in this case, for space reasons, it is possible to substitute one of the arrowheads of the measurement line with a datum triangle symbol.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/db9a74707a19500078b7c53db1288652.png" />
+<center>Fig. 6.10 The three ways of indicating a flat surface as a datum feature</center></p>
+<p align="justify">It is necessary to pay particular attention to the correct indication of a datum applied to a feature of size on a drawing: the line of the symbol should coincide with the dimension line of the datum feature, and the indication errors shown in Fig. 6.14 should be avoided.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/07c5ec18849f8e334294aae5bc7c7b89.png" />
+<center>Fig. 6.11 Indications of a datum feature. A triangle does not need to be filled in</center>
+<img alt="" src="https://pics.caxer.net/2024/06/beb9ee23d390fbcb730ace70bd2ef116.png" />
+<center>Fig. 6.12 Indications of a datum feature: the dashed leader line indicates that the datum is on the other side (when the considered surface is hidden)</center>
+<img alt="" src="https://pics.caxer.net/2024/06/53edfbe3e15f6867ef5f07216af2b9e9.png" />
+<center>Fig. 6.13 Indication of a datum feature for a feature of size</center>
+<img alt="" src="https://pics.caxer.net/2024/06/b6b726516db47c33f975d1d3c17917bf.png" />
+<center>Fig. 6.14 Possible errors in the indications of a datum axis. Cylindrical surfaces should not be used as datums. The symbol line should coincide with the dimension line of the datum feature</center></p>
+<p align="justify">In light of all the definitions that have been given so far, does the datum symbol that is utilised in technical drawings indicate a datum or a datum feature (Fig. 6.15)? The symbol obviously indicates a datum feature and not a datum!</p>
+
+<h2 id="63-the-datum-systems-in-asme-y145">6.3 The Datum Systems in ASME Y14.5</h2>
+<p align="justify">TheASMEY14.5 standardmakes a clear distinction between the concept of a datum feature, a datum and a datum feature simulator Adatum is an abstract geometrical feature (point, axis or plane from which a dimensional measurement is made), which represents the perfect counterpart of a datum feature (e.g. an ideal plane or the axis of the perfect geometrical counterpart).</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/1422e3ad38938e0a698146e735d7a89d.png" />
+<center>Fig. 6.15 Does the symbol, that is used in technical drawings, indicate a datum or a datum feature? The symbol obviously indicates a datum feature and not a datum</center></p>
+<p align="justify">Simulated datums are conceptually perfect (almost physically perfect), and they represent a bridge between the imperfect real world of datum features and the perfect imaginary world of datums. Ultimately, it is opportune to distinguish between the real datum feature of a workpiece (named datum feature) and the datum, that is, the equivalent theoretical datum (plane, axis or centerplane), as simulated by the associated inspection or manufacturing equipment.</p>
+<p align="justify">The datum system of a tool machine is shown in Fig. 6.16: the production equipment has the task of aligning the features of the workpiece with the datums of the machine (for example, datum feature A is aligned with the clamping machine and datum feature B is made to coincide with the z axis). In short, no datums exist on a workpiece, but they are simulated by the datum feature system of the tool machine.</p>
+<p align="justify">The true geometric counterpart is the theoretically perfect boundary used to establish a datum from a specified datum feature. True geometric counterparts have a perfect form, and a basic orientation and location relative to other true geometric counterparts for all the datum references in a feature control frame. Furthermore, the true geometric counterparts are adjustable in size, when the datum feature applies an RMB (Regardless Material Boundary), and are fixed at the designated size, when an MMB(MaximumMaterial Boundary) or an LMB ( Least Material Boundary)  is specified.</p>
+<p align="justify">The relationship between the primary datum feature and its true geometric counterpart constrains the degrees of freedom. Table 6.2 shows some examples of degrees of freedom constrained by primary datum features, RMB, in the same way as for the concept of invariance class.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/bcf290b8a187ed94c426dd84937a0bc1.png" />
+<center>Fig. 6.16 No datums exist on a workpiece, but they are simulated by the datum feature system of the tool machine (physical datum simulators)</center></p>
+<p><center>Table 6.2 Constrained degrees of freedom for primary datum features</center>
+<img alt="" src="https://pics.caxer.net/2024/06/ce90d8da45ac4084620fc7ff7e421810.png" /></p>
+<h3 id="631-establishing-a-datum">6.3.1 Establishing a Datum</h3>
+<p align="justify">In the case of a datum surface made up of a flat surface of a component, the datum is supplied by a theoretical envelope plane (e.g. a tangent plane, the true geometric
+counterpart), of perfect geometrical form, and the simulated datum feature is constituted,
+for example, by the surface plate of the inspection device. As can be seen in
+Fig. 6.17, it is also possible to define a theoretical envelope plane, of perfect form
+(true geometric counterpart of a datum feature), on the surface plate; if the workpiece
+is placed on the surface plate, the two theoretical planes might not coincide because
+of the irregularities on the surfaces. In spite of this observation, a simulated datum is
+in fact used as a datum in industrial practice. Such a distinctionmay appear excessive
+but, in reality, many errors exist and much confusion arises in defining the datums
+and in the inspection of the parts with measuring machines.</p>
+<p align="justify">If, instead, the datum feature is a feature of size, the symbol should be associated with a linear dimension (subject to tolerance) and should therefore be placed directly
+on the dimension, as shown in Fig. 6.18; in this case, the datum is made up of the axis or centerplane, which is established by an ideal envelope surface.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/6980a5e78cba8ed5b58e241c48ae2c25.png" />
+<center>Fig. 6.17 Establishment of a datum plane</center>
+<img alt="" src="https://pics.caxer.net/2024/06/302e67bad838a54bb774f75758bb279c.png" />
+<center>Fig. 6.18 Placement of Datum Feature Symbols on Features of Size</center>
+<img alt="" src="https://pics.caxer.net/2024/06/5f0c3364755b518ca0d5627b793a00d8.png" />
+<center>Fig. 6.19 When a cylindrical feature is designated as a datum feature, the datum axis is derived by placing the part in an adjustable gauge (self-centring chuck used as a datum feature simulator)</center></p>
+<p align="justify">Figure 6.19 shows the case of a datum made up of the axis of a cylinder; again
+in this case, it is possible to make a distinction between the axis of the smallest true
+geometric counterpart and the simulated datum feature, defined as the axis of the
+feature simulated by the verification gauge. As axes do not exist in the real world,
+the equivalent theoretical feature is represented, in the case of external features, by
+the axis of the smallest cylinder restricted by a perfect form. The datum is simulated
+by the verification device, for example, with a gauge or a self-centring device.</p>
+<p align="justify">In the case of cylindrical holes, the simulated datum can be established through the
+use of a cylindrical gauge, with themaximum inscribable diameter, or an expandable
+chuck; whatever the type of chuck, once inserted into the hole, it does not take on
+a fixed shape, and it is necessary to regulate it so that any displacements are of the
+same magnitude in all directions (it is obvious that no modifiers should be applied
+to the datum).</p>
+<p align="justify">In short, it is necessary to pay a great deal of attention to the characterisation
+of the simulated theoretical cylinder (which the ASME standards define as Actual
+Mating Envelope, AME). In the simplest case, the cylinder is orientated according
+to the axis of the imperfect hole, but when the axis of the hole is defined on the basis
+of one or two datums, the simulated cylinder (Related Actual Mating Envelope) is
+arranged according to the DRF or Datum Reference Frame.</p>
+<p align="justify">Figure 6.20 further clarifies the meaning of the related and unrelated Actual
+Mating Envelopes: datum A is a plane, while datum B is the axis of a 34 mm
+cylinder, orientated with an error of 0.05 mm with respect to plane A; the 10 mm
+hole is located with respect to datums A and B. The axis of the feature of size is obtained from the smallest restricted orientated cylinder (the unrelated actual mating
+envelope) and it is useful to verify a perpendicularity error with respect to datum A.
+The smallest circumscribed cylinder perpendicular to A (the related actual mating
+envelope) is used to determine the axis of datum B. The derived centerplane is a
+curve made up of the central points of the transversal section perpendicular to the
+axis of the feature of size, and it is used to determine the straightness error.</p>
+<p align="justify">It is necessary to avoid confusing the axis of a feature of size (obtained through
+the smallest circumscribed cylinder orientated according to the feature, Fig. 6.21)
+for the axis of the datum B (perfect geometrical counterpart perpendicular to datum
+A).</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/a10995f6401dd7db4b5f1772195d46b9.png" />
+<center>Fig. 6.20 Related and Unrelated AME in the ASME standard</center></p>
+<h3 id="632-location-of-a-workpiece-in-a-datum-reference-frame">6.3.2 Location of a Workpiece in a Datum Reference Frame</h3>
+<p align="justify">Simulated datums have the purpose of defining a DRF (Datum Reference Frame),
+that is, the datum system of 3 perpendicular planes that define the origin for the
+measurements and which allow the workpiece to be blocked during an inspection
+(Fig. 6.22). In short, the indications of aDRF system supply an immediate description
+of the orientation and of the location of a workpiece (and of the tolerance zones),
+thus making the inspection operations univocal and repeatable.</p>
+<p align="justify">In order to limit the movement of a part so that repeatable measurements can be
+made, it is necessary to restrict the six degrees of freedom. In fact, each piece that
+has to be controlled or worked in a datum system has six degrees of freedom (3
+linear and 3 rotational, Fig. 6.23). It is possible to show that, in order to eliminate
+the 6 degrees of freedom, it is necessary to block the workpiece in a datum reference frame with 3 perpendicular planes, named the primary, secondary and tertiary planes,
+respectively.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/28dc0a39458d9229c6d6a43d9a7632bb.png" />
+<center>Fig. 6.21 It is necessary to be careful not to confuse the axis of a feature size (obtained through the
+largest circumscribed cylinder orientated according to the feature), which is useful to control the
+perpendicularity of a 40 mm hole, with the axis of datum B (axis of the largest inscribable cylinder
+perpendicular to datum A)</center>
+<img alt="" src="https://pics.caxer.net/2024/06/7afccb9da9677be270cad252fc2ce76c.png" />
+<center>Fig. 6.22 DRF (Datum Reference Frame)</center>
+<img alt="" src="https://pics.caxer.net/2024/06/b4eec13a036465e8b5ac3373acd70a1d.png" />
+<center>Fig. 6.23 The six degrees of freedom of a workpiece: any movement in the space can be attributed to three possible translations in the direction of the datum axes X, Y and Z and to three rotations, u, v and w, around the same axes</center></p>
+<p align="justify">Let us consider the drawing of the component shown in Fig. 6.24, whose holes
+are located with respect to the three datums A, B and C; in order to conduct a
+measurement test, datum featureAis put into contact with datum feature simulator A,
+thus establishing a primary datum with at least three points of contact, and eliminating
+a degree of linear freedom Z and two rotational degrees of freedom, that is, u and v
+(Fig. 6.25).</p>
+<p align="justify">Datum feature B is then put in contact with datum feature simulator B, and in this
+way secondary datum B is established, with a minimum of two points of contact and
+elimination of a linear degree, X, and a rotational one w (Fig. 6.26). Finally, tertiary
+datum C is defined with just a single point of contact and the last degree of freedom
+Y is eliminated by putting datum feature C in contact with its simulator (Fig. 6.27).</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/8a2758890b63c656eae3d5df571c026a.png" />
+<center>Fig. 6.24 In order to make the identification of a datum reference frame clearer, the ASME Y14.5
+standard introduced the possibility of identifying the axes of the datum system on a drawing in
+order to offer an immediate description of the orientation and location of a workpiece (and of the
+relative tolerance zone), thus making the measurement test operations univocal and repeatable</center>
+<img alt="" src="https://pics.caxer.net/2024/06/c1a59bfaee6a4ffee2e93f8772b78ba5.png" />
+<center>Fig. 6.25 Datum feature A of the component is put in contact with the datum feature simulator, and
+in this way a primary datum is established, with a minimum of three contact points and elimination
+of a degree of freedom Z and two rotational ones, that is, u and v. The X, Y and w degrees of
+freedom still have to be constrained</center>
+<img alt="" src="https://pics.caxer.net/2024/06/e0ed0eec6d618415f5ae62ca66a2b254.png" />
+<center>Fig. 6.26 Subsequently, datum feature B is put in contact with datum feature simulator B, and in this way the secondary datum is established, with a minimum of two contact points and elimination of a linear degree, X, and a rotational one w. The translation along Y still has to be constrained</center>
+<img alt="" src="https://pics.caxer.net/2024/06/44e044bf60cae8cbf64a345c81f8f0d5.png" />
+<center>Fig. 6.27 Final blocking of the workpiece: tertiary datum C is defined with at least one point of contact (and elimination of the last degree of linear freedom Y), thus datum feature C is placed in relation to its simulator</center>
+<img alt="" src="https://pics.caxer.net/2024/06/c35481333309cd8be9b6295a5539345a.png" />
+<center>Fig. 6.28 The order of the datums in the tolerance frame indicates the sequence of the inspection operations; as can be seen, the location dimension of the hole changes according to the datum plane on which the workpiece is placed</center></p>
+<p align="justify">It is necessary to pay particular attention to the order of the datum sequence as
+it influences the result of an inspection. In fact, if the inspection procedure of the
+workpiece in Fig. 6.28 is considered, it can be noted that, as the location tolerances
+have been indicated in the datum order A, B and C in the frame, the inspection
+procedure should be conducted after locating the workpiece in the datum system
+according to the exact same order. A change in this order (i.e. A, C, B) would
+influence the measurement test, as can be seen in the same figure.</p>
+
+<h3 id="633-selection-of-datum-features">6.3.3 Selection of Datum Features</h3>
+<p align="justify">The starting point for a correct dimensioning is the identification of a datum reference
+frame with 3 perpendicular planes (DRF), and in this way functioning and mating of
+the parts are guaranteed. As previously mentioned, it is erroneous to think that the
+datums should only be established in the manufacturing design phase on the basis
+of the requirements of the various operations. Datums should in fact be selected
+on the basis of the functional requirements of a part in order to allow the functional
+relationships to be communicated on the drawing. The datums should instead always
+be established on the basis of the functional requirements because, if the datums are
+chosen on the basis of the technological location of the workpieces, the tolerance
+available for manufacturing may be reduced.</p>
+<p align="justify">The choice of the datum features should obviously be considered in function of
+the assembly requirements of the parts, and their sequence very often reproduces
+the logical assembly sequence. The case shown in Fig. 6.29 can be considered as an
+example: the part with 2 holes should be mated to the plate by means of two fixed
+fasteners. The logical sequence that allows an appropriate choice of the three datums
+to be made is:</p>
+<ol>
+<li><p align="justify">identification of the feature that orientates the workpiece in the assembly, in order to establish the primary datum; in Fig. 6.30, the feature that orientates the workpiece is constituted by mating surface A.</p></li>
+<li><p align="justify">Identification of the feature that locates the workpiece in the assembly, in order to establish the secondary datum; datum feature B that locates the workpiece is represented by the axis of the two cylindrical features.</p></li>
+<li><p align="justify">Identification of the feature that blocks the workpiece in the assembly, in order to establish the tertiary datum. Finally, tertiary datum C that blocks the workpiece, which is constituted by the milled surface of the component and of the corresponding surface of the plate, is added.</p></li>
+<li><p align="justify">Qualification of the datum features through the application, orientation and location of opportune form tolerances.</p></li>
+<li><p align="justify">Location of all the geometrical features with reference to the datum features, while utilising the profile tolerances to locate the surfaces.</p></li>
+</ol>
+<p><img alt="" src="https://pics.caxer.net/2024/06/8a3468932a79bca14a5a9cde194579e7.png" />
+<center>Fig. 6.29 Choice of the functional datums for a mating with fixed fasteners</center>
+<img alt="" src="https://pics.caxer.net/2024/06/cb93f568c018fd48d99f69d5500590e5.png" />
+<center>Fig. 6.30 The feature that is used to orientate the workpiece is made up of mating surface A (which is defined as the primary datum), while the feature that is considered to locate it is the axis of the two cylindrical features (which is defined as a secondary datum). Finally, the tertiary datum that blocks the workpiece, which is constituted by themilled surface of the component and of the corresponding surface of the plate, is added</center></p>
+<p align="justify">The complete dimensioning of the upper component is reported in theASMEdrawing in Fig. 6.31. The dimensioning of the lower plate is obtained by following the same previously outlined rules.</p>
+<p align="justify">However, it is not always necessary to use three datums. The case shown in
+Fig. 6.32 can be considered as an example: the cover with the holes should be mated
+with the tank through fixed fasteners; the feature that orientates the workpiece is
+constituted by mating surface A (which is defined as the primary datum), while the
+feature that locates it is represented by the axis of the cylindrical part (which is defined
+as the secondary datum). When the axis of a cylinder is used as the datum feature, it is
+necessary to imagine using two perpendicular planes, whose intersection determines
+the datum axis, and which can rotate freely around the same axis (Fig. 6.33).</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/a06d6c77524b1186e8c323b21682d274.png" />
+<center>Fig. 6.31 Complete dimensioning of a component with the 3 established functional datums. The primary datum is qualified with a planarity tolerance and the secondary one with a perpendicularity tolerance. Finally, the two holes in the plate are located with a location tolerance with respect to the three established datums</center></p>
+<p align="justify">If the assembly of the cover takes place as in Fig. 6.34, that is, the tongue must
+be mated with the relative groove, three datums are required, that is, it is necessary to add the tertiary datum that blocks the workpiece and which is constituted by the
+centerplane of the groove.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/318ef5d8e8d27d76d411c288ea999460.png" />
+<img alt="" src="https://pics.caxer.net/2024/06/1b5e4a9476c7a7ca105ddd71562c3f6a.png" />
+<center>Fig. 6.32 Selection of the primary datum (used to orientate) and of the secondary datum (used to locate)</center>
+<img alt="" src="https://pics.caxer.net/2024/06/b223f2aba867f0816e2406a3323cb4aa.png" />
+<center>Fig. 6.33 The axis of a cylinder that is used as a datum feature is associated with two imaginary perpendicular planes, whose intersection determines the datum axis, which can rotate freely around the same axis</center></p>
+<p align="justify">In this case, the two imaginary planes can no longer rotate and are constrained in a precise location (Fig. 6.35). Table 6.3 summarises the main differences between
+the ISO and ASME standards pertaining to the specification of a datum.</p>
+<p><img alt="" src="https://pics.caxer.net/2024/06/f5dbb23dc722c5b1c15561b99e2b6e0d.png" />
+<img alt="" src="https://pics.caxer.net/2024/06/8d501a634cc3a05c03117dda727dbc98.png" />
+<center>Fig. 6.34 Selection of the primary datum (used to orientate), of the secondary datum (used to locate) and of the tertiary datum (used to block)</center>
+<img alt="" src="https://pics.caxer.net/2024/06/d6ec619311b0d4ab3a09e9b45513b325.png" />
+<center>Fig. 6.35 The second datum is constituted by an axis and the third by a centerplane: the two imaginary planes can no longer rotate and are constrained in a precise location</center></p>
+<script src="https://giscus.app/client.js"
+        data-repo="gchongo/gchongo.github.io"
+        data-repo-id="R_kgDOL1P4-w"
+        data-category="General"
+        data-category-id="DIC_kwDOL1P4-84Cf98Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="Interdependence%20Between%20Dimensions%20and%20Geometry.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 5. Interdependence Between Dimensions and Geometry">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                5. Interdependence Between Dimensions and Geometry
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="Form%20Tolerances.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 7.Form Tolerances">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                7.Form Tolerances
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2024 CAXer
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+    
+    
+    
+    <a href="https://pastory.org" target="_blank" rel="noopener me" title="陈年往事" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://howhy.day" target="_blank" rel="noopener" title="今日号外" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4 24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9 2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>
